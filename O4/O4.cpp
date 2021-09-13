@@ -3,51 +3,57 @@
 
 using namespace std;
 
-void MENU(int MENU_SELECTION) {
-    if (MENU_SELECTION == 1)
+void menu(int menuSelection) {
+    if (menuSelection == 1){
         cout << "->";
+    }
     cout << "1.\n";
 
-    if (MENU_SELECTION == 2)
+    if (menuSelection == 2) {
         cout << "->";
+    }
     cout << "2.\n";
 
-    if (MENU_SELECTION == 3)
+    if (menuSelection == 3) {
         cout << "->";
+    }
     cout << "3.\n";
 }
 
-void INPUT(int *INPUT_SELECTION, bool *INPUT_VERIFICATION, bool *INPUT_BREAK) {
+void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
     switch (_getch()) {
     case 72:
-        if (*INPUT_SELECTION == 1)
-            *INPUT_SELECTION = 3;
+        if (*inputSelection == 1)
+            *inputSelection = 3;
         else
-            *INPUT_SELECTION = *INPUT_SELECTION - 1;
+            *inputSelection = *inputSelection - 1;
         break;
     case 80:
-        if (*INPUT_SELECTION == 3)
-            *INPUT_SELECTION = 1;
+        if (*inputSelection == 3)
+            *inputSelection = 1;
         else
-            *INPUT_SELECTION = *INPUT_SELECTION + 1;
+            *inputSelection = *inputSelection + 1;
         break;
     case 13:
-        *INPUT_VERIFICATION = true;
+        *inputVerification = true;
         break;
     case 27:
-        *INPUT_BREAK = true;
+        *inputBreak = true;
         break;
     }
 }
 
-bool CHECK(int CHECK_SELECTION, bool CHECK_VERIFICATION) {
-    if (CHECK_VERIFICATION) {
-        if (CHECK_SELECTION == 1)
+bool check(int checkSelection, bool checkVerification) {
+    if (checkVerification) {
+        if (checkSelection == 1) {
             cout << "1";
-        if (CHECK_SELECTION == 2)
+        }
+        if (checkSelection == 2) {
             cout << "2";
-        if (CHECK_SELECTION == 3)
+        }
+        if (checkSelection == 3) {
             cout << "3";
+        }
     }
 
     return false;
@@ -56,20 +62,22 @@ bool CHECK(int CHECK_SELECTION, bool CHECK_VERIFICATION) {
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    int SELECTION = 1;
-    bool VERIFICATION = false;
-    bool BREAK = false;
+    int selection = 1;
+    bool verification = false;
+    bool breaker = false;
 
     do {
         system("cls");
 
-        MENU(SELECTION);
+        menu(selection);
         
-        INPUT(&SELECTION, &VERIFICATION, &BREAK);
+        input(&selection, &verification, &breaker);
 
-        VERIFICATION = CHECK(SELECTION, VERIFICATION);
+        verification = check(selection, verification);
 
-    } while (!(BREAK));
+
+
+    } while (!(breaker));
 
     return 0;
 }
