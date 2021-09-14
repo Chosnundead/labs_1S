@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Оформить заказ</title>
+    <style>
+        .h{
+            background-color: lightgray;
+            font-weight: bold;
+            margin: 21px;
+            padding: 21px;
+            font-family: Arial, sans-serif;
+        }
+        .spacetop{
+            margin-top: 33px;
+        }
+        .spaceleft{
+            position: absolute;
+            left: 210px;        }
+    </style>
+</head>
+<body>
+    <h3 class="h">Оформить заказ</h3>
+    <div class="spacetop">
+        Имя
+        <input class="spaceleft" type="text" />
+    </div>
+    <div class="spacetop">
+        телефон 
+        <input class="spaceleft" type="text" />
+    </div>
+    <div class="spacetop">
+        адрес
+        <textarea class="spaceleft" type="text" rows="6" cols="50"></textarea>
+    </div>
+    <div style="margin-top: 111px">
+        способ оплаты
+        <input class="spaceleft" type="radio" name="check"/> <span style="position: absolute; left: 240px">наличные</span>
+        <input class="spaceleft" style="margin-top: 33px" type="radio" name="check"/> <span style="position: absolute; left: 240px; margin-top: 33px">пластиковая карточка</span>
+        <input class="spaceleft" style="margin-top: 66px" type="radio" name="check"/> <span style="position: absolute; left: 240px; margin-top: 66px">безналичный расчёт</span>
+    </div>
+    <div style="margin-top: 111px">
+        желаемый день
+        <input class="spaceleft" type="date" />
+        <br />доставки
+    </div>
+    <div class="spacetop">
+        дополнительно
+        <input class="spaceleft" type="checkbox" /> <span style="position: absolute; left: 240px">перед доставкой свяжитесь со мной</span>
+        <input class="spaceleft" style="margin-top: 33px" type="checkbox" /><span style="position: absolute; left: 240px; margin-top: 33px">курьер должен захватить пузырёк</span>
+    </div>
+    <div style="margin-top: 66px">
+        <input class="spaceleft" type="submit" />
+    </div>
+</body>
+</html>

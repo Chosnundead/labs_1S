@@ -16,7 +16,7 @@ document.write("<h2>Задание 2.</h2>\n<p>Результат == ", result, 
 alert("Вас приветствует учебный центр!");
 
 let userName = prompt("Введите ваше имя: ", "Имя");
-alert("Добро пожаловать на наши курсы, ", userName, "!");
+alert("Добро пожаловать на наши курсы, " + userName + "!");
 
 let isUserWant = confirm("Хотите стать wed-дизайнером?");
 
