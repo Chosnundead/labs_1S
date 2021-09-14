@@ -1,13 +1,31 @@
 ﻿#include <iostream>
 #include <conio.h>
+#include <string>
 
 using namespace std;
+
+void calculator() {
+    system("cls");
+    int number[2];
+    string text;
+
+    cout << "Введите, то что вы хотите посчитать: ";
+    cin >> text;
+    
+    char textToChar[100];
+    strcpy(textToChar, text.c_str());
+
+    for (int i = 0; i < 100; i++)
+        cout << textToChar[i] << endl;
+
+    //_getch();
+}
 
 void menu(int menuSelection) {
     if (menuSelection == 1){
         cout << "->";
     }
-    cout << "1.\n";
+    cout << "1.Лабораторная работа №4. Дополнительное задание №1.\n";
 
     if (menuSelection == 2) {
         cout << "->";
@@ -46,7 +64,7 @@ void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
 bool check(int checkSelection, bool checkVerification) {
     if (checkVerification) {
         if (checkSelection == 1) {
-            cout << "1";
+            calculator();
         }
         if (checkSelection == 2) {
             cout << "2";
@@ -74,7 +92,7 @@ int main()
         input(&selection, &verification, &breaker);
 
         verification = check(selection, verification);
-
+        
 
 
     } while (!(breaker));
