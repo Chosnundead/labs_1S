@@ -14,9 +14,9 @@ void calculator() {
     int temp[2] = { 0, 0 };
 
     cout << "Введите, то что вы хотите посчитать: ";
-    getline(cin, text);
+    getline(cin, text);//Получение из cin полной строки(с пробелами)
 
-    strcpy_s(textToChar, text.c_str());
+    strcpy_s(textToChar, text.c_str());//Безопасная копия строки text с переводом в char элемента и копия его значения в соответсвующий элемент массива textToChar
     for (int i = 0; i < 100; i++)
         if ((textToChar[i] == 'ю') || (textToChar[i] == ' '))
             textToChar[i] = NULL;
