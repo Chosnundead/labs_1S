@@ -5,16 +5,49 @@
 
 using namespace std;
 
-void chess1() {
+void sphere() {
     system("cls");
-    int chess[8][8] = { 0, 0, 0, 0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0, 0, 0, 0,
-                        0, 0, 0, 0, 0, 0, 0, 0 };
+    double data[3];
+    double* temp = new double;
+
+    cout << "Может ли шар радиуса r пройти через ромбообразное отверстие с диагоналями p и q?\nr == ";
+    cin >> data[0];
+    cout << "p == ";
+    cin >> data[1];
+    cout << "q == ";
+    cin >> data[2];
+
+    *temp = (data[1] * data[2]) / (sqrt((pow(data[1], 2)) + (pow(data[2], 2))));
+
+    if (data[0] <= (*temp)) {
+        cout << "Ответ: Да, может.\n";
+    } else {
+        cout << "Ответ: Нет, не может.\n";
+    }
+
+    delete temp;
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void chess() {
+    system("cls");
+    short int oX = 0;
+    short int oY = 0;
+    int iTest, jTest;
+    short stage = 0;
+    bool result = true;
+    bool loopChess = true;
+    bool err = false;
+    short int chess[8][8] = { 1, 0, 0, 0, 0, 0, 0, 0,
+                              0, 0, 0, 0, 0, 0, 0, 0,
+                              0, 0, 0, 0, 0, 0, 0, 0,
+                              0, 0, 0, 0, 0, 0, 0, 0,
+                              0, 0, 0, 0, 0, 0, 0, 0,
+                              0, 0, 0, 0, 0, 0, 0, 0,
+                              0, 0, 0, 0, 0, 0, 0, 0,
+                              0, 0, 0, 0, 0, 0, 0, 0 };
     /*
        _______________________________________________________
       |      |      |      |      |      |      |      |      |
@@ -42,28 +75,258 @@ void chess1() {
       |  K<- |  K<- |  K<- |  K<- |  K<- |  K<- |  K<- |  K<- |
       |______|______|______|______|______|______|______|______|
       */
-    for (int i = 0; i < 8; i++) {
-        if (i == 0) {
-            cout << " _______________________________________________________\n";
-            cout << "|      |      |      |      |      |      |      |      |\n";
-        }
-        if (i > 0 && i < 8) {
-            cout << "|______|______|______|______|______|______|______|______|\n";
-            cout << "|      |      |      |      |      |      |      |      |\n";
-        }
+    while (loopChess) {
+        system("cls");
         
-        for (int j = 0; j < 8; j++) {
-            if (chess[i][j] == 0) {
-                cout << "|      ";
+        for (int i = 0; i < 8; i++) {
+            //Отображение доски
+            if (i == 0) {
+                cout << " _______________________________________________________\n";
+                cout << "|      |      |      |      |      |      |      |      |\n";
+            }
+            if (i > 0 && i < 8) {
+                cout << "|______|______|______|______|______|______|______|______|\n";
+                cout << "|      |      |      |      |      |      |      |      |\n";
+            }
+
+            for (int j = 0; j < 8; j++) {
+                switch (chess[i][j]) {
+                case 0:
+                    cout << "|      ";
+                    break;
+                case 1:
+                    cout << "|    < ";
+                    break;
+                case 2:
+                    cout << "|  БК< ";
+                    break;
+                case 3:
+                    cout << "|  БК  ";
+                    break;
+                case 4:
+                    cout << "|  ЧС< ";
+                    break;
+                case 5:
+                    cout << "|  ЧС  ";
+                    break;
+                }
+            }
+            cout << "|\n";
+
+            if (i == 7) {
+                cout << "|______|______|______|______|______|______|______|______|\n";
+            }
+
+            if (err && i == 7) {
+                cout << "Вы не можете поставить черного слона на белого короля!\n";
+                err = false;
             }
         }
-        cout << "|\n";
 
-        if (i == 7) {
-            cout << "|______|______|______|______|______|______|______|______|\n";
-        }
+        if (stage != 2) {
+            switch (_getch()) {
+            case 72:
+                switch (chess[oY][oX]) {
+                case 1:
+                    chess[oY][oX] = 0;
+                    break;
+                case 2:
+                    chess[oY][oX] = 3;
+                    break;
+                case 4:
+                    chess[oY][oX] = 5;
+                    break;
+                }
+                if (oY == 0) {
+                    oY = 7;
+                }
+                else {
+                    oY--;
+                }
+                switch (chess[oY][oX]) {
+                case 0:
+                    chess[oY][oX] = 1;
+                    break;
+                case 3:
+                    chess[oY][oX] = 2;
+                    break;
+                case 5:
+                    chess[oY][oX] = 4;
+                    break;
+                }
+                break;
+            case 80:
+                switch (chess[oY][oX]) {
+                case 1:
+                    chess[oY][oX] = 0;
+                    break;
+                case 2:
+                    chess[oY][oX] = 3;
+                    break;
+                case 4:
+                    chess[oY][oX] = 5;
+                    break;
+                }
+                if (oY == 7) {
+                    oY = 0;
+                }
+                else {
+                    oY++;
+                }
+                switch (chess[oY][oX]) {
+                case 0:
+                    chess[oY][oX] = 1;
+                    break;
+                case 3:
+                    chess[oY][oX] = 2;
+                    break;
+                case 5:
+                    chess[oY][oX] = 4;
+                    break;
+                }
+                break;
+            case 77:
+                switch (chess[oY][oX]) {
+                case 1:
+                    chess[oY][oX] = 0;
+                    break;
+                case 2:
+                    chess[oY][oX] = 3;
+                    break;
+                case 4:
+                    chess[oY][oX] = 5;
+                    break;
+                }
+                if (oX == 7) {
+                    oX = 0;
+                }
+                else {
+                    oX++;
+                }
+                switch (chess[oY][oX]) {
+                case 0:
+                    chess[oY][oX] = 1;
+                    break;
+                case 3:
+                    chess[oY][oX] = 2;
+                    break;
+                case 5:
+                    chess[oY][oX] = 4;
+                    break;
+                }
+                break;
+            case 75:
+                switch (chess[oY][oX]) {
+                case 1:
+                    chess[oY][oX] = 0;
+                    break;
+                case 2:
+                    chess[oY][oX] = 3;
+                    break;
+                case 4:
+                    chess[oY][oX] = 5;
+                    break;
+                }
+                if (oX == 0) {
+                    oX = 7;
+                }
+                else {
+                    oX--;
+                }
+                switch (chess[oY][oX]) {
+                case 0:
+                    chess[oY][oX] = 1;
+                    break;
+                case 3:
+                    chess[oY][oX] = 2;
+                    break;
+                case 5:
+                    chess[oY][oX] = 4;
+                    break;
+                }
+                break;
+            case 13:
+                switch (stage) {
+                case 0:
+                    stage++;
+                    chess[oY][oX] = 2;
+                    break;
+                case 1:
+                    if (chess[oY][oX] == 2) {
+                        err = true;
+                    }
+                    else {
+                        stage++;
+                        chess[oY][oX] = 4;
+                    }
+                    break;
+                }
+                break;
+            case 27:
+                loopChess = false;
+                break;
+            }
+        } else {
+            for (int iFill = 0; iFill < 8; iFill++) {
+                for (int jFill = 0; jFill < 8; jFill++) {
+                    if (chess[iFill][jFill] == 4 || chess[iFill][jFill] == 5 || chess[iFill][jFill] == 6) {
+                        iTest = iFill;
+                        jTest = jFill;
+                        while (iTest >= 0 && jTest >= 0) {
+                            chess[iTest][jTest] = 6;
+                            iTest--;
+                            jTest--;
+                        }
+
+                        iTest = iFill;
+                        jTest = jFill;
+                        while (iTest <= 7 && jTest <= 7) {
+                            chess[iTest][jTest] = 6;
+                            iTest++;
+                            jTest++;
+                        }
+
+                        iTest = iFill;
+                        jTest = jFill;
+                        while (iTest >= 0 && jTest <= 7) {
+                            chess[iTest][jTest] = 6;
+                            iTest--;
+                            jTest++;
+                        }
+
+                        iTest = iFill;
+                        jTest = jFill;
+                        while (iTest <= 7 && jTest >= 0) {
+                            chess[iTest][jTest] = 6;
+                            iTest++;
+                            jTest--;
+                        }
+                    }
+                }
+            }
+
+            for (int iCheck = 0; iCheck < 8; iCheck++) {
+                for (int jCheck = 0; jCheck < 8; jCheck++) {
+                    if (result) {
+                        if (chess[iCheck][jCheck] == 2 || chess[iCheck][jCheck] == 3) {
+                            result = false;
+                        }
+                    }
+                }
+            }
+
+            if (result) {
+                cout << "Ответ: Ууууу угрожаю, бойся меня!\n";
+                loopChess = false;
+            }
+            else {
+                cout << "Ответ: У нас с тобой нейтралитет, бро.)\n";
+                loopChess = false;
+            }
+        }    
     }
 
+    cout << "Для продолжения нажмите ENTER...";
     _getch();
 }
 
@@ -224,7 +487,7 @@ void menu(int menuSelection) {
     if (menuSelection == 3) {
         cout << "->";
     }
-    cout << "3.\n";
+    cout << "3.Лабораторная работа №4. Дополнительное задание №3.\n";
 }
 
 void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
@@ -256,10 +519,10 @@ bool check(int checkSelection, bool checkVerification) {
             calculator();
         }
         if (checkSelection == 2) {
-            chess1();
+            chess();
         }
         if (checkSelection == 3) {
-            cout << "3";
+            sphere();
         }
     }
 
