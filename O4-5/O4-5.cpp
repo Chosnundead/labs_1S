@@ -5,6 +5,104 @@
 
 using namespace std;
 
+void ticket() {
+    system("cls");
+    string ticketOne, ticketTwo;
+    int number[2] = { 0, 0 };
+    int tmp = 0;
+
+    cout << "Шестизначный автобусный билет считается удачным, если сумма его цифр делится на 7. Могут ли два билета подряд быть удачными?\n";
+
+    do {
+        cout << "Введите номер первого билета: ";
+        cin >> ticketOne;
+    } while (ticketOne.length() != 6);
+
+    do {
+        cout << "Введите номер второго билета: ";
+        cin >> ticketTwo;
+    } while (ticketTwo.length() != 6);
+
+    for (int i = 5; i >= 0; i--) {
+        number[0] = number[0] + (ticketOne[i] - '0');//Крутая тема чтоб переводить char число в int, надо б запомнить)
+        number[1] = number[1] + (ticketTwo[i] - '0');
+        tmp++;
+    }
+
+    if (!(number[0] % 7) && !(number[1] % 7)) {
+        cout << "Ответ: Да.\n";
+    } else {
+        cout << "Ответ: Нет.\n";
+    }
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void firm() {
+    system("cls");
+    double p, q;
+    int dayCount = 0;
+
+    cout << "Торговая фирма в первый день работы реализовала товаров на P тыс. руб., а затем ежедневно увеличивала выручку на 3%. Какой будет выручка фирмы в тот день, когда она впервые превысит заданное значение Q? Сколько дней придется торговать фирме для достижения этого результата?\n";
+    cout << "p == ";
+    cin >> p;
+    cout << "q == ";
+    cin >> q;
+
+    while (p <= q) {
+        p *= 1.03;
+        dayCount++;
+    }
+
+    cout << "Ответ: Выручка составит " << p << " и это займёт " << dayCount << " дней.\n";
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void lab5() {
+    system("cls");
+    double result[2];
+    double a = 8;
+    double m = 6;
+    double b = 5 * pow(10, -3);
+    double k[3] = { 1.6, 9.1, 8 };
+
+    cout << "Цикл for:\n";
+    for (int i = 0; i < 3; i++) {
+        result[0] = sin(k[i] / a) / cos(m * b);
+        result[1] = result[0] / (pow(result[0], 2) + 1) / (1 - exp(k[i]));
+        cout << "d == " << result[0] << endl << "c == " << result[1] << endl;
+    }
+
+    cout << "Цикл while:\n";
+    while (k[2] >= 3) {
+        result[0] = sin(k[2] / a) / cos(m * b);
+        result[1] = result[0] / (pow(result[0], 2) + 1) / (1 - exp(k[2]));
+        cout << "d == " << result[0] << endl << "c == " << result[1] << endl;
+        k[2] -= 0.5;
+    }
+
+    cout << "Двойной цикл:\n";
+    k[0] = 1.7;
+    k[1] = 5;
+    k[2] = -2;
+    a = 2;
+    while (a <= 2.8) {
+        for (int i = 0; i < 3; i++) {
+            result[0] = sin(k[i] / a) / cos(m * b);
+            result[1] = result[0] / (pow(result[0], 2) + 1) / (1 - exp(k[i]));
+            cout << "d == " << result[0] << endl << "c == " << result[1] << endl;
+        }
+
+        a += 0.2;
+    }
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
 void sphere() {
     system("cls");
     double data[3];
@@ -487,19 +585,39 @@ void menu(int menuSelection) {
     if (menuSelection == 3) {
         cout << "->";
     }
-    cout << "3.Лабораторная работа №4. Дополнительное задание №3.\n";
+    cout << "3.Лабораторная работа №4. Дополнительное задание №5.\n";
+
+    if (menuSelection == 4) {
+        cout << "->";
+    }
+    cout << "4.Лабораторная работа №5.\n";
+
+    if (menuSelection == 5) {
+        cout << "->";
+    }
+    cout << "5.Лабораторная работа №5. Дополнительное задание №2.\n";
+
+    if (menuSelection == 6) {
+        cout << "->";
+    }
+    cout << "6.Лабораторная работа №5. Дополнительное задание №1.\n";
+
+    if (menuSelection == 7) {
+        cout << "->";
+    }
+    cout << "7.Лабораторная работа №5. Дополнительное задание №3.\n";
 }
 
 void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
     switch (_getch()) {
     case 72:
         if (*inputSelection == 1)
-            *inputSelection = 3;
+            *inputSelection = 7;
         else
             *inputSelection = *inputSelection - 1;
         break;
     case 80:
-        if (*inputSelection == 3)
+        if (*inputSelection == 7)
             *inputSelection = 1;
         else
             *inputSelection = *inputSelection + 1;
@@ -522,6 +640,18 @@ bool check(int checkSelection, bool checkVerification) {
             chess();
         }
         if (checkSelection == 3) {
+            sphere();
+        }
+        if (checkSelection == 4) {
+            lab5();
+        }
+        if (checkSelection == 5) {
+            firm();
+        }
+        if (checkSelection == 6) {
+            ticket();
+        }
+        if (checkSelection == 7) {
             sphere();
         }
     }
