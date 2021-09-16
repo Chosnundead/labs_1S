@@ -5,6 +5,48 @@
 
 using namespace std;
 
+void equipment() {
+    system("cls");
+    double p;
+    double s[2000];
+    int n;
+    int tmp[2];
+    double result = 0;
+
+    cout << "Фирма ежегодно на протяжении n лет(до 1000) закупала оборудование стоимостью соответственно s1, s2, ..., sn pублей в год (эти числа вводятся и обрабатываются последовательно). Ежегодно в результате износа и морального старения (амортизации) все имеющееся оборудование уценивается на р% от первоначальной стоимости. Какова общая стоимость накопленного оборудования за n лет?\n";
+    cout << "n == ";
+    cin >> n;//Количество задействованных элементов массива s
+    cout << "p(%) == ";
+    cin >> p;
+    p /= 100;
+    
+    tmp[0] = n;
+    tmp[1] = 0;
+    for (int i = 0; i < 2000; i++) {
+        s[i] = NULL;
+    }
+
+    while (tmp[0] > 0) {
+        cout << "s" << (tmp[1] + 1) << " == ";
+        cin >> s[tmp[1]];
+        tmp[0]--;
+        tmp[1]++;
+    }
+
+    tmp[0] = n;
+    tmp[1] = 0;
+    while (tmp[1] < n) {
+        result = result + (s[tmp[1]] * pow(p, tmp[0]));
+        tmp[0]--;
+        tmp[1]++;
+    }
+
+    cout << "Ответ: " << result << endl;
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
 void ticket() {
     system("cls");
     string ticketOne, ticketTwo;
@@ -605,7 +647,7 @@ void menu(int menuSelection) {
     if (menuSelection == 7) {
         cout << "->";
     }
-    cout << "7.Лабораторная работа №5. Дополнительное задание №3.\n";
+    cout << "7.Лабораторная работа №5. Дополнительное задание №4.\n";
 }
 
 void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
@@ -652,7 +694,7 @@ bool check(int checkSelection, bool checkVerification) {
             ticket();
         }
         if (checkSelection == 7) {
-            sphere();
+            equipment();
         }
     }
 
