@@ -5,6 +5,27 @@
 
 using namespace std;
 
+void lab6() {
+    system("cls");
+    double a = 1.055;
+    double x = 0.6;
+    double y, z;
+
+    for (double n = 6; n <= 14; n += 2) {
+        y = (pow(cos(pow(x, 2)), 2)) / (abs(x));
+        if (y < (a * x * n)) {
+            z = abs(y);
+        } if (y >= (a * x * n)) {
+            z = sqrt(1 + exp(-y));
+        }
+
+        cout << "y == " << y << endl << "z == " << z << endl;
+    }
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
 void equipment() {
     system("cls");
     double p;
@@ -648,18 +669,23 @@ void menu(int menuSelection) {
         cout << "->";
     }
     cout << "7.Лабораторная работа №5. Дополнительное задание №4.\n";
+
+    if (menuSelection == 8) {
+        cout << "->";
+    }
+    cout << "8.Лабораторная работа №6.\n";
 }
 
 void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
     switch (_getch()) {
     case 72:
         if (*inputSelection == 1)
-            *inputSelection = 7;
+            *inputSelection = 8;
         else
             *inputSelection = *inputSelection - 1;
         break;
     case 80:
-        if (*inputSelection == 7)
+        if (*inputSelection == 8)
             *inputSelection = 1;
         else
             *inputSelection = *inputSelection + 1;
@@ -695,6 +721,9 @@ bool check(int checkSelection, bool checkVerification) {
         }
         if (checkSelection == 7) {
             equipment();
+        }
+        if (checkSelection == 8) {
+            lab6();
         }
     }
 
