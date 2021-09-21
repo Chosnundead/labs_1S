@@ -14,10 +14,10 @@
 }
 
 function summation() {
-    document.write("<p style=\" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: darkred; font - size: large;\">1) ", 10 + 5, "</p>\n");
-    document.write("<p style=\" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: darkred; font - size: large;\">2) ", "10" + "5", "</p>\n");
-    document.write("<p style=\" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: darkred; font - size: large;\">3) ", 22 + "5", "</p>\n");
-    document.write("<p style=\" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: darkred; font - size: large;\">4) ", "22" + 5, "</p>\n");
+    document.write("<p style=\" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: darkred; font-size: large;\">1) ", 10 + 5, "</p>\n");
+    document.write("<p style=\" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: darkred; font-size: large;\">2) ", "10" + "5", "</p>\n");
+    document.write("<p style=\" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: darkred; font-size: large;\">3) ", 22 + "5", "</p>\n");
+    document.write("<p style=\" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: darkred; font-size: large;\">4) ", "22" + 5, "</p>\n");
     alert("Результатом сложения строки и числа всегда будет строка.");
 }
 
