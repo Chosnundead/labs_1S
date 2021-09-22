@@ -5,23 +5,206 @@
 
 using namespace std;
 
+void car() {
+    system("cls");
+    int arr[4];
+    int number[2];
+    int count;
+    bool isAnswer;
+    int sumOfArr = 0;
+
+    cout << "Три приятеля были свидетелями нарушения правил дорожного движения. Номер автомобиля – четырехзначное число – никто полностью не запомнил. Из показаний следует, что номер делится на 2, на 7 и на 11, в записи номера участвуют только две цифры, сумма цифр номера равна 30.  Составить алгоритм и программу для определения номера автомашины.\n";
+
+    for (int i = 1000; i < 10000; i++) {
+        if (i == 1000) {
+            cout << "Ответ:";
+        }
+
+        if ((!(i % 2)) && (!(i % 7)) && (!(i % 11))) {
+            sumOfArr = 0;
+            count = 0;
+            isAnswer = false;
+            for (int j = 10000; j >= 10; j /= 10) {
+                arr[count] = (i % j) / (j / 10);
+                count++;
+            }
+            
+            number[0] = arr[0];
+            number[1] = arr[1];
+            for (int k = 2; k < 4; k++) {
+                if (number[0] == number[1]) {
+                    number[1] = arr[k];
+                } else {
+                    if ((number[0] == arr[k]) || (number[1] == arr[k])) {
+                        isAnswer = true;
+                    } else {
+                        isAnswer = false;
+                        break;
+                    }
+                }
+                if ((k == 3) && (number[0] == number[1])) {
+                    isAnswer = false;
+                    break;
+                }
+            }
+            
+            for (int x = 0; x < 4; x++) {
+                sumOfArr = sumOfArr + arr[x];
+            }
+            if (sumOfArr == 30) {
+                isAnswer = true;
+            } else {
+                isAnswer = false;
+            }
+            
+            if (isAnswer) {
+                cout << " " << i;
+            }
+            /*for (int k = 0; k < 4; k++) {
+                cout << arr[k];
+            }
+            cout << endl;
+            count = 0;*/
+        }
+    }
+
+    cout << endl;
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void vessel() {
+    system("cls");
+    class Vessel {
+    public:
+        const int maxCount = 12;
+        int count = 1;
+        double volume;
+    };
+
+    Vessel vessel[2];
+
+    cout << "Имеются два  сосуда.  В первом сосуде находится C1 литров воды,  во втором –  C2 литров воды. Из первого сосуда переливают половину воды во второй  сосуд,  затем из второго переливают половину в первый сосуд,  и так далее. Сколько воды окажется в обоих сосудах после 12 переливаний?\n";
+    cout << "C1 == ";
+    cin >> vessel[0].volume;
+    cout << "C2 == ";
+    cin >> vessel[1].volume;
+
+    while (vessel[0].count <= vessel[0].maxCount) {
+        if (vessel[0].count % 2) {
+            vessel[0].volume = vessel[0].volume + (vessel[1].volume / 2);
+            vessel[1].volume /= 2;
+        } else {
+            vessel[1].volume = vessel[1].volume + (vessel[0].volume / 2);
+            vessel[0].volume /= 2;
+        }
+
+        vessel[0].count++;
+    }
+
+    cout << "Ответ: C1 == " << vessel[0].volume << ", C2 == " << vessel[1].volume << ".\n";
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void magicNumber() {
+    system("cls");
+
+    class Task {
+    public:
+        int arr[3];
+        int count = 0;
+        bool answer = true;
+        const int startNumber = 100;
+        const int endNumber = 1000;
+        const int rankOfEndNumber = 1000;
+
+        void refresh() {
+            count = 0;
+            answer = true;
+        }
+
+        void end() {
+            for (int i = startNumber; i < endNumber; i++) {
+                if (i == ((int)sqrt(i) * (int)sqrt(i))) {
+                    for (int j = rankOfEndNumber; j >= 10; j /= 10) {
+                        arr[count] = (i % j) / (j / 10);
+                        count++;
+                    }
+                    for (int k = 1; k < count; k++) {
+                        if ((arr[(k - 1)] < arr[k]) && answer) {
+                            answer = true;
+                        }
+                        else {
+                            answer = false;
+                        }
+                    }
+                    if (answer) {
+                        cout << i << endl;
+                    }
+                    refresh();
+                }
+            }
+        }
+    };
+
+    Task magic;
+
+    magic.end();
+    
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
 void lab6() {
+    /*
+    class JustTest {
+    public:
+        double y;
+        double x;
+
+        void res() {
+            cout << (x * y) << endl;
+        }
+    };
+    JustTest test;
+    test.x = 8;
+    test.y = 9;
+    test.res();
+    system("pause");
+    */
+
     system("cls");
     double a = 1.055;
     double x = 0.6;
     double y, z;
+    int count;
 
     for (double n = 6; n <= 14; n += 2) {
         y = (pow(cos(pow(x, 2)), 2)) / (abs(x));
         if (y < (a * x * n)) {
             z = abs(y);
-        } if (y >= (a * x * n)) {
+        } else {
             z = sqrt(1 + exp(-y));
         }
 
         cout << "y == " << y << endl << "z == " << z << endl;
     }
 
+    cout << "Ошибок тут в принципе нету. А всё это происходит из-за не корректного условия задачи, т.е. переменная n не участвует в присвоении переменной y нового значения -> на z она тоже не влияет(только первый заход).\n";
+    
+    cout << "Вывести первые 6 натуральных чисел, делителями которых являются числа 3 и 5.\n";
+    cout << "Введите число до которого надо проверить: ";
+    cin >> count;
+
+    for (int i = 1; i <= count; i++) {
+        if (((i % 3) == 0) && ((i % 5) == 0)) {
+            cout << i << endl;
+        }
+    }
+    
     cout << "Для продолжения нажмите ENTER...";
     _getch();
 }
@@ -674,18 +857,33 @@ void menu(int menuSelection) {
         cout << "->";
     }
     cout << "8.Лабораторная работа №6.\n";
+
+    if (menuSelection == 9) {
+        cout << "->";
+    }
+    cout << "9.Лабораторная работа №6. Дополнительное задание №1.\n";
+
+    if (menuSelection == 10) {
+        cout << "->";
+    }
+    cout << "10.Лабораторная работа №6. Дополнительное задание №3.\n";
+
+    if (menuSelection == 11) {
+        cout << "->";
+    }
+    cout << "11.Лабораторная работа №6. Дополнительное задание №4.\n";
 }
 
 void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
     switch (_getch()) {
     case 72:
         if (*inputSelection == 1)
-            *inputSelection = 8;
+            *inputSelection = 11;
         else
             *inputSelection = *inputSelection - 1;
         break;
     case 80:
-        if (*inputSelection == 8)
+        if (*inputSelection == 11)
             *inputSelection = 1;
         else
             *inputSelection = *inputSelection + 1;
@@ -724,6 +922,15 @@ bool check(int checkSelection, bool checkVerification) {
         }
         if (checkSelection == 8) {
             lab6();
+        }
+        if (checkSelection == 9) {
+            magicNumber();
+        }
+        if (checkSelection == 10) {
+            vessel();
+        }
+        if (checkSelection == 11) {
+            car();
         }
     }
 
