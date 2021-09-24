@@ -5,6 +5,178 @@
 
 using namespace std;
 
+void iAmLazy2() {
+    system("cls");
+
+    int size;
+    int result[2] = { 0, 0 };
+
+    cout << "Введите размер последовательности: ";
+    cin >> size;
+
+    int* arr = new int[size];
+
+    for (int i = 0; i < size; i++) {
+        cout << "Введите " << i << " элемент массива: ";
+        cin >> arr[i];
+    }
+
+    for (int j = 0; j < size; j++) {
+        if (arr[j] > 0) {
+            if (result[0] < arr[j]) {
+                result[0] = arr[j];
+            }
+        }
+        if (arr[j] < 0) {
+            if (result[1] > arr[j]) {
+                result[1] = arr[j];
+            }
+        }
+    }
+
+    cout << "Ответ: максимальный положительный == " << result[0] << ", минимальный отрицательный == " << result[1] << endl;
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void iAmLazy() {
+    system("cls");
+    
+    int size;
+    int result[2] = { 0, 1 };
+    
+    cout << "Введите размер последовательности: ";
+    cin >> size;
+
+    int* arr = new int[size];
+    
+    for (int i = 0; i < size; i++) {
+        cout << "Введите " << i << " элемент массива: ";
+        cin >> arr[i];
+    }
+
+    for (int j = 0; j < size; j++) {
+        if (arr[j] > 0) {
+            result[0] += arr[j];
+        }
+        if (arr[j] < 0) {
+            result[1] *= arr[j];
+        }
+    }
+    
+    cout << "Ответ: сумма положительных == " << result[0] << ", произведение отрицательных == " << result[1] << endl;
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void subsequence() {
+    system("cls");
+    
+    class Subsequence {
+    public:
+        string numbers = "";
+        int tempNumbers[4] = { 0, 0, 0, 0 };
+        int arrSize = 1;
+        const int zeroConst = 0;
+        char symbol;
+        int result = 0;
+        //int* arr = new int[arrSize];
+
+        bool outputOnAir() {
+            cout << "Введите ваши элементы последовательности целых чисел через пробел(esc для выхода\\enter для подтверждения элемента): ";
+            cout << numbers;
+            return true;
+        }
+
+        void input() {
+            while ((outputOnAir()) && ((symbol = _getch()) != 13)) {
+                numbers += symbol;
+                system("cls");
+            }
+        }
+
+        /*void reArrSize()
+        {
+            int* reArrSize_arr = new int[arrSize + 1];
+            for (int i = 0; i < arrSize; i++)
+                reArrSize_arr[i] = arr[i];
+
+            arrSize++;
+            arr = reArrSize_arr;
+            delete[] reArrSize_arr;
+        }*/
+    };
+
+    Subsequence even;
+    
+    cout << "Найти  в  последовательности  n целых чисел и вывести значение суммы четных элементов.\n";
+
+    even.input();
+
+    for (int i = 0; i < even.numbers.length(); i++) {
+
+        if ((even.numbers[i] == ' ') || (i == 0)) {
+            if (i == 0) {
+                even.tempNumbers[1] = 0;//Начало считывания
+                even.tempNumbers[0] = 0;
+            }
+            else {
+                even.tempNumbers[1] = i + 1;//Начало считывания
+                even.tempNumbers[0] = i + 1;
+            }
+
+            while ((even.numbers[even.tempNumbers[0]] != ' ') && (!(even.tempNumbers[0] == even.numbers.length()))) {
+                even.tempNumbers[0]++;
+            }
+            
+            even.tempNumbers[2] = 0;
+            even.tempNumbers[3] = even.tempNumbers[1];
+            while (even.tempNumbers[1] < even.tempNumbers[0]) {
+            even.tempNumbers[2] = even.tempNumbers[2] + ((even.numbers[even.tempNumbers[3]] - '0') * pow(10, (even.tempNumbers[0] - even.tempNumbers[1] - 1)));
+            even.tempNumbers[0]--;
+            even.tempNumbers[3]++;
+            }
+
+            if (!(even.tempNumbers[2] % 2)) {
+                even.result += even.tempNumbers[2];
+            }
+        } 
+    }
+    //even.reArrSize();
+    //even.arr[even.arrSize - 2] = even.tempNumbers[2];
+
+    cout << "\nОтвет: " << even.result << endl;
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void lab7() {
+    system("cls");
+    double y[5] = { 3, -2, 0.9, 0.5, 1 };
+    double p, q, result;
+    
+    p = 0;
+    for (int i = 0; i < 5; i++) {
+        if (y[i] < p) {
+            p = y[i];
+        }
+    }
+
+    result = 1;
+    for (int j = 0; j < 5; j++) {
+        result *= (y[j] - 5);
+    }
+    result += p;
+
+    cout << "Ответ: " << result << endl;
+    
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
 void car() {
     system("cls");
     int arr[4];
@@ -872,18 +1044,38 @@ void menu(int menuSelection) {
         cout << "->";
     }
     cout << "11.Лабораторная работа №6. Дополнительное задание №4.\n";
+
+    if (menuSelection == 12) {
+        cout << "->";
+    }
+    cout << "12.Лабораторная работа №7.\n";
+
+    if (menuSelection == 13) {
+        cout << "->";
+    }
+    cout << "13.Лабораторная работа №7. Дополнительное задание №1.\n";
+
+    if (menuSelection == 14) {
+        cout << "->";
+    }
+    cout << "14.Лабораторная работа №7. Дополнительное задание №6.\n";
+
+    if (menuSelection == 15) {
+        cout << "->";
+    }
+    cout << "15.Лабораторная работа №7. Дополнительное задание №7.\n";
 }
 
 void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
     switch (_getch()) {
     case 72:
         if (*inputSelection == 1)
-            *inputSelection = 11;
+            *inputSelection = 15;
         else
             *inputSelection = *inputSelection - 1;
         break;
     case 80:
-        if (*inputSelection == 11)
+        if (*inputSelection == 15)
             *inputSelection = 1;
         else
             *inputSelection = *inputSelection + 1;
@@ -931,6 +1123,18 @@ bool check(int checkSelection, bool checkVerification) {
         }
         if (checkSelection == 11) {
             car();
+        }
+        if (checkSelection == 12) {
+            lab7();
+        }
+        if (checkSelection == 13) {
+            subsequence();
+        }
+        if (checkSelection == 14) {
+            iAmLazy();
+        }
+        if (checkSelection == 15) {
+            iAmLazy2();
         }
     }
 
