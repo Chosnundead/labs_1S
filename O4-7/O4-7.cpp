@@ -5,6 +5,36 @@
 
 using namespace std;
 
+/*//НОРМАЛЬНО ОФОРМИТЬ КАК СВОЕ ЗАДАНИЕ!!!
+void resize(int** resizeArray, int* resizeSize) {
+    (*resizeSize)++;
+    int* temp = new int[*resizeSize];
+    for (int i = 0; i < (*resizeSize - 1); i++) {
+        temp[i] = (*resizeArray)[i];
+    }
+    delete[] * resizeArray;
+    *resizeArray = new int[*resizeSize];
+    for (int i = 0; i < (*resizeSize - 1); i++) {
+        (*resizeArray)[i] = temp[i];
+    }
+    delete[] temp;
+}
+
+void main() {
+    int size = 1;
+    int* arr;
+    arr = new int[size];
+
+    arr[0] = 1;
+    resize(&arr, &size);
+    arr[1] = 2;
+    resize(&arr, &size);
+    arr[2] = 3;
+
+    cout << arr[0] << endl << arr[1] << endl << arr[2];
+}
+*/
+
 void iAmLazy2() {
     system("cls");
 
