@@ -2,10 +2,192 @@
 #include <conio.h>
 #include <string>
 #include <cmath>
+#include <ctime>
 
 using namespace std;
 
-/*//НОРМАЛЬНО ОФОРМИТЬ КАК СВОЕ ЗАДАНИЕ!!!
+void speedrun12() {
+    system("cls");
+    
+    string lalala;
+    int in = 1;
+
+    cout << "Введите ваше предложение: ";
+    getline(cin, lalala);
+    setlocale(LC_ALL, "russian");
+
+    for (int i = 0; i < lalala.length(); i++) {
+        if ((lalala[i] >= 'А') && (lalala[i] <= 'я')) {
+            for (int j = i; j < lalala.length(); j++) {
+                i++;
+                if (!(in % 2)) {
+                    lalala[i] = NULL;
+                }
+                if (!((lalala[i] >= 'А') && (lalala[i] <= 'я'))) {
+                    break;
+                }
+            }
+            in++;
+        }
+    }
+    
+    //192 - 255
+    cout << lalala << endl;
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void speedrun11() {
+    system("cls");
+    srand(time(0));
+
+    int n, temp;
+
+    cout << "Введите количество элементов вашего массива: ";
+    cin >> n;
+
+    int* arr = new int[n];
+
+    for (int i = 0; i < n; i++) {
+        arr[i] = rand() + 1;
+    }
+    
+    for (int i = 0; i < n; i++) {
+        temp = 0;
+        cout << "arr[" << i << "] == " << arr[i];
+        for (int j = 0; j < n; j++) {
+            if (arr[i] == arr[j]) {
+                temp++;
+            }
+        }
+        cout << " * " << temp << endl;
+    }
+
+    cout << "Тут типо другое заданиеXD:\n";
+
+    int* anotherArr = new int[n];
+
+    for (int i = 0; i < n; i++) {
+        anotherArr[i] = rand() + 1;
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (arr[i] == anotherArr[j]) {
+                cout << "arr[" << i << "] == " << arr[i] << " == anotherArr[" << j << "] == " << anotherArr[j] << endl;
+            }
+        }
+    }
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void speedrun10() {
+    system("cls");
+
+    char ss1[33];
+    char ss2[33];
+    int number[2];
+    int n, p;
+
+    cout << "A == ";
+    cin >> number[0];
+    cout << "B == ";
+    cin >> number[1];
+
+    _itoa_s(number[0], ss1, 2);
+    _itoa_s(number[1], ss2, 2);
+
+    cout << ss1 << endl << ss2 << endl;
+
+    number[1] = number[1] << 2;
+    number[1] = ((ss1[4] - '0') << 5) | ((ss1[5] - '0') << 6);
+
+    _itoa_s(number[0], ss1, 2);
+    _itoa_s(number[1], ss2, 2);
+
+    cout << number[0] << endl << number[1] << endl;
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void speedrun9() {
+    system("cls");
+
+    int n;
+    int* arr;
+    srand(time(0));
+    int slice = 0;
+
+    cout << "Введите размер вашего массива: ";
+    cin >> n;
+    arr = new int[n];
+
+    cout << "\t\t======1 Задание======\n";
+
+    for (int i = 0; i < n; i++) {
+        cout << "arr[" << i << "] == ";
+        arr[i] = (rand() % 100);
+        cout << arr[i] << endl;
+    }
+
+    for (int j = (n - 1); j >= 0; j--) {
+        arr[j] = 0;
+        for (int k = 0; k < j; k++) {
+            arr[j] += arr[k];
+        }
+    }
+
+    cout << "\t\t======Результат массива======\n";
+
+    for (int x = 0; x < n; x++) {
+        cout << "arr[" << x << "] == " << arr[x] << endl;
+    }
+
+    cout << "\t\t======2 Задание======\n";
+
+    for (int i = 0; i < n; i++) {
+        cout << "arr[" << i << "] == ";
+        arr[i] = (rand() % 100);
+        cout << arr[i] << endl;
+    }
+
+    cout << "\t\t======Результат массива======\n";
+
+    for (int x = 0; x < n; x++) {
+        if (arr[x] < 0 && ((n - 1) != x)) {
+            arr[(x + 1)] = 10;
+        }
+        if (slice && ((x + slice) < n)) {
+            arr[x] = arr[x + slice];
+        }
+        if (!((x + slice) % 3) && x && ((x + slice) < n)) {
+            arr[x] = arr[(x + slice + 1)];
+            slice++;
+        }
+    }
+
+    int* temp = new int[(n - slice)];
+    for (int i = 0; i < (n - slice); i++) {
+        temp[i] = arr[i];
+    }
+    delete[] arr;
+    arr = new int[(n - slice)];
+    arr = temp;
+
+    for (int i = 0; i < (n - slice); i++) {
+        cout << "arr[" << i << "] == " << arr[i] << endl;
+    }
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void resizer() {
+/*======Решение этой задачи через функцию======
 void resize(int** resizeArray, int* resizeSize) {
     (*resizeSize)++;
     int* temp = new int[*resizeSize];
@@ -34,6 +216,53 @@ void main() {
     cout << arr[0] << endl << arr[1] << endl << arr[2];
 }
 */
+    system("cls");
+
+    class Array {
+    public:
+        int size = 1;
+        int* arr = new int[size];
+
+        void resize() {
+            size++;
+            int* temp = new int[size];
+            for (int i = 0; i < (size - 1); i++) {
+                temp[i] = arr[i];
+            }
+            delete[] arr;
+            arr = new int[size];
+            for (int i = 0; i < (size - 1); i++) {
+                arr[i] = temp[i];
+            }
+            delete[] temp;
+        }
+    };
+
+    Array plus;
+
+    int size = 0;
+
+    cout << "Введите количество элементов вашего массива: ";
+    cin >> size;
+
+    while (size > 0) {
+        cout << "arr[" << (plus.size - 1) << "] == ";
+        cin >> plus.arr[(plus.size - 1)];
+        plus.resize();
+        size--;
+    }
+    
+    size = 0;
+    cout << "\t\t======Результат вашего массива======\n";
+
+    while (size < (plus.size - 1)) {
+        cout << "arr[" << size << "] == " << plus.arr[size] << endl;
+        size++;
+    }
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
 
 void iAmLazy2() {
     system("cls");
@@ -1094,18 +1323,48 @@ void menu(int menuSelection) {
         cout << "->";
     }
     cout << "15.Лабораторная работа №7. Дополнительное задание №7.\n";
+    
+    if (menuSelection == 16) {
+        cout << "->";
+    }
+    cout << "16.Моё задание.\n";
+
+    if (menuSelection == 17) {
+        cout << "->";
+    }
+    cout << "17.Лабораторная работа №9.\n";
+
+    if (menuSelection == 18) {
+        cout << "->";
+    }
+    cout << "18.Лабораторная работа №10(доделать).\n";
+
+    if (menuSelection == 19) {
+        cout << "->";
+    }
+    cout << "19.Лабораторная работа №11.\n";
+
+    if (menuSelection == 20) {
+        cout << "->";
+    }
+    cout << "20.Лабораторная работа №12(доделать).\n";
+
+    if (menuSelection == 21) {
+        cout << "->";
+    }
+    cout << "15.Лабораторная работа №7. Дополнительное задание №7.\n";
 }
 
 void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
     switch (_getch()) {
     case 72:
         if (*inputSelection == 1)
-            *inputSelection = 15;
+            *inputSelection = 21;
         else
             *inputSelection = *inputSelection - 1;
         break;
     case 80:
-        if (*inputSelection == 15)
+        if (*inputSelection == 21)
             *inputSelection = 1;
         else
             *inputSelection = *inputSelection + 1;
@@ -1165,6 +1424,24 @@ bool check(int checkSelection, bool checkVerification) {
         }
         if (checkSelection == 15) {
             iAmLazy2();
+        }
+        if (checkSelection == 16) {
+            resizer();
+        }
+        if (checkSelection == 17) {
+            speedrun9();
+        }
+        if (checkSelection == 18) {
+            speedrun10();
+        }
+        if (checkSelection == 19) {
+            speedrun11();
+        }
+        if (checkSelection == 20) {
+            speedrun12();
+        }
+        if (checkSelection == 21) {
+            resizer();
         }
     }
 

@@ -146,4 +146,79 @@ function objectsNumber() {
     document.write("<tr><td>", numberInt, "</td><td>", numberInt.toPrecision(6), "</td></tr>");
     document.write("<tr><td>", numberFloat, "</td><td rowspan=\"2\">toString(n), n == 16</td><td>", numberFloat.toString(16), "</td><td rowspan=\"2\">Возвращает строковое представление числа в системе счисления с n основанием. Если параметр не указан, имеется в виду десятеричная система счисления. Этот метод имеют все объекты. </td></tr>");
     document.write("<tr><td>", numberInt, "</td><td>", numberInt.toString(16), "</td></tr>");
+
+    document.write("</table>");
+}
+
+function lab3Task1() {
+    let arr = [];
+
+    arr[0] = 6 * Math.pow(Math.PI, 2) + 3 * Math.pow(Math.E, 8);
+    arr[1] = 2 * Math.cos(4) + Math.cos(12) + 8 * Math.pow(Math.E, 3);
+    arr[2] = 3 * Math.sin(9) + Math.log(5) + Math.sqrt(3);
+    arr[3] = 2 * Math.tan(5) + 6 * Math.PI + Math.sqrt(12);
+
+    let lower = 0;
+    let high = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < arr[lower]) {
+            lower = i;
+        }
+        if (arr[i] > arr[high]) {
+            high = i;
+        }
+    }
+    alert("Минимальное: arr[" + lower + "] == " + arr[lower]);
+    alert("Максимальное: arr[" + high + "] == " + arr[high]);
+}
+
+function lab3Task2() {
+    let arr = ["pow", "pop", "push", "shift", "round", "floor", "sline", "sort"];
+    let arrMath = [];
+    let arrArray = [];
+    
+    for (let i = 0; i < arr.length; i++) {
+        if (Array.prototype.hasOwnProperty(arr[i])) {
+            arrArray.push(arr[i]);
+        }
+        if (Math.hasOwnProperty(arr[i])) {
+            arrMath.push(arr[i]);
+        }
+    }
+    arrMath.unshift("log");
+    arrArray.push("unshift");
+
+    console.log(arr);
+    console.log(arrArray);
+    console.log(arrMath);
+}
+
+function lab3Task3() {
+    let name = "Солодкий Денис Викторович";
+
+    console.log(name.length);
+
+    let nameAnother = name;
+    nameAnother = nameAnother.toUpperCase();
+    nameAnother = nameAnother.toLowerCase();
+    nameAnother = name.concat(nameAnother);
+    nameAnother = nameAnother.replace(/[а-я]/g, '');
+
+    console.log(name);
+    console.log(nameAnother);
+}
+
+function lab3Task4() {
+    x = new Date();
+
+    document.write("<table border=\"1\" style=\" font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: darkred; font-size: large;\">");
+
+    document.write("<tr><td>Год</td><td>", x.getFullYear(), "</td></tr>");
+    document.write("<tr><td>Месяц</td><td>", (x.getMonth() + 1), "</td></tr>");
+    document.write("<tr><td>День</td><td>", x.getDate(), "</td></tr>");
+    document.write("<tr><td>Час</td><td>", x.getHours(), "</td></tr>");
+    document.write("<tr><td>Минуты</td><td>", x.getMinutes(), "</td></tr>");
+    document.write("<tr><td>Секунды</td><td>", x.getSeconds(), "</td></tr>");
+
+    document.write("</table>");
 }
