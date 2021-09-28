@@ -1,0 +1,151 @@
+﻿.task1 tr td {
+    padding: 0px;
+    margin: 0px;
+}
+
+.task1 {
+    empty-cells: hide;
+}
+
+.task1 tr td:first-child {
+    background-color: red;
+}
+
+.task1 tr:first-child {
+    background-color: yellow;
+}
+
+.task2 {
+    empty-cells: hide;
+}
+
+.task2 tr td {
+    border: 2px ridge grey;
+}
+
+.task2 #lol td {
+    background-color: darkblue;
+    color: white;
+}
+
+.task2 thead td:first-child {
+    background-color: none;
+}
+
+.task2 tr td:nth-child(2) {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.task2 tr td:nth-child(3) {
+    background-color: purple;
+    color: white;
+}
+
+.task2 tr td:nth-child(4) {
+    background-color: green;
+    color: white;
+}
+
+.task2 caption {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.task3 thead tr td {
+    background-color: red;
+    border: 1px solid black;
+}
+
+.task3 tfoot tr td {
+    background-color: red;
+    border: 1px solid black;
+}
+
+.task3 #task3 tr td:first-child {
+    background-color: red;
+    border: 1px solid black;
+}
+
+.task3 #task3 tr td:last-child {
+    background-color: red;
+    border: 1px solid black;
+}
+
+.task3 tbody tr:nth-child(odd) td:nth-child(even) {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.task3 tbody tr:nth-child(even) td:nth-child(even) {
+    background-color: black;
+    border: 1px solid black;
+}
+
+.task3 tbody tr:nth-child(odd) td:nth-child(odd) {
+    background-color: black;
+    border: 1px solid black;
+}
+
+.task3 tbody tr:nth-child(even) td:nth-child(odd) {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.task3 {
+    border-spacing: 0px 0px;
+}
+
+.task4 {
+    background-color: indigo;
+    margin-left: 50px;
+    color: white;
+    padding: 21px;
+    font-size: 1.2em;
+    position: absolute;
+}
+
+.task4And2 {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 1);
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.75);
+}
+
+.task4 div div select {
+    margin-left: 66px;
+}
+
+.task4 div div {
+    margin: 6px;
+    display: inline-block;
+    line-height: 40px;
+}
+
+.task4And4 {
+    background: navy;
+    box-shadow: 0 0 4px white;
+    color: white;
+}
+
+.task4 input {
+    margin-left: 21px;
+    border-radius: 5px 5px 5px 5px;
+}
+
+#task3 {
+    margin-top: 6px;
+}
+
+#task5 {
+    margin-top: 6px;
+    margin-left: 6px;
+}
+
+.task4 p {
+    text-align: center;
+    font-weight: bold;
+}
+
+#task4 {
+    margin-left: 205px;
+}

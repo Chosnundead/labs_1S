@@ -148,6 +148,8 @@ function objectsNumber() {
     document.write("<tr><td>", numberInt, "</td><td>", numberInt.toString(16), "</td></tr>");
 
     document.write("</table>");
+
+    //console.log(NULL + undefined);
 }
 
 function lab3Task1() {
