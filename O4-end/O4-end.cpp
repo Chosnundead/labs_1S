@@ -6,6 +6,73 @@
 
 using namespace std;
 
+void speedrun8() {
+    system("cls");
+
+    const int n = 200;
+    double a = 8, b = 14, result1 = 0, h, x, s1, s2, result2 = 0, e = 0.0001, x1;
+    int i;
+
+    h = (b - a) / n;
+    x = a;
+
+    while (true) {
+        result1 += (h * ((2 + pow(x, 3)) + (2 + pow(x, 3) + h)) / 2);
+        x += h;
+        if (x > (b - h)) {
+            break;
+        }
+    }
+
+    cout << "z(s) == " << result1 << endl;
+
+    h = (b - a) / (2 * n);
+    x = a + 2 * h;
+    s1 = 0;
+    s2 = 0;
+    i = 1;
+
+    while (i < n) {
+        s2 += (2 + pow(x, 3));
+        x += h;
+        s1 += (2 + pow(x, 3));
+        x += h;
+
+        i += 1;
+    }
+    
+    result2 = (h / 3) * (a + 4 * (a + h) + 4 * s1 + 2 * s2 + b);
+
+    cout << "z == " << result2 << endl;
+
+    if ((a * a) > 0) {
+        x1 = a;
+    } else {
+        x1 = b;
+    }
+
+    while (abs((x1 - x)) > e) {
+        x = x1;
+        x1 = x - (((2 * x) + pow(x, 3) - 7) / (2 + (3 * pow(x, 2))));
+    }
+    
+    cout << "x1 == " << x1 << endl;
+
+    while ((abs(a - b)) > (2 * exp(1))) {
+        x = (a + b) / 2;
+        if ((a * ((2 * x) + pow(x, 3) - 7)) <= 0) {
+            b = x;
+        } else {
+            a = x;
+        }
+    }
+
+    cout << "x == " << x << endl;
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
 void speedrun12() {
     system("cls");
     
@@ -87,28 +154,93 @@ void speedrun11() {
 void speedrun10() {
     system("cls");
 
-    char ss1[33];
-    char ss2[33];
-    int number[2];
-    int n, p;
+    int number[4];
+    int n, p, m;
 
     cout << "A == ";
     cin >> number[0];
     cout << "B == ";
     cin >> number[1];
 
-    _itoa_s(number[0], ss1, 2);
-    _itoa_s(number[1], ss2, 2);
+    number[2] = number[0];
+    number[0] >>= 5;
+    number[0] <<= 30;
+    number[0] >>= 30;
+    number[3] = number[1];
+    number[1] >>= 5;
+    number[1] <<= 2;
+    number[1] &= number[0];
+    number[0] = number[2];
+    number[2] <<= 27;
+    number[2] >>= 27;
+    number[0] >>= 7;
+    number[0] <<= 5;
+    number[0] &= number[2];
+    number[1] <<= 5;
+    number[3] <<= 27;
+    number[3] >>= 27;
+    number[1] &= number[3];
 
-    cout << ss1 << endl << ss2 << endl;
+    cout << "A == " << number[0] << endl;
+    cout << "B == " << number[1] << endl;
 
-    number[1] = number[1] << 2;
-    number[1] = ((ss1[4] - '0') << 5) | ((ss1[5] - '0') << 6);
+    cout << "n == ";
+    cin >> n;
+    cout << "p == ";
+    cin >> p;
 
-    _itoa_s(number[0], ss1, 2);
-    _itoa_s(number[1], ss2, 2);
+    number[2] = p - n;
 
-    cout << number[0] << endl << number[1] << endl;
+    while (number[2] < p) {
+        number[0] |= (1 << number[2]);
+        number[2]++;
+    }
+
+    cout << "A == ";
+    cin >> number[0];
+    number[2] = 0;
+
+    for (int i = 5; i <= 10; i++) {
+        number[1] = 0;
+        number[1] |= (1 << i);
+        number[1] &= number[0];
+        if (number[1]) {
+            number[2]++;
+        }
+    }
+
+    cout << "Кол-во единиц в A с 5 по 10 бит: " << number[2] << endl;
+
+    cout << "A == ";
+    cin >> number[0];
+    cout << "B == ";
+    cin >> number[1];
+    cout << "n == ";
+    cin >> n;
+    cout << "m == ";
+    cin >> m;
+
+    number[2] = number[0];
+    number[0] >>= n;
+    number[0] <<= 29;
+    number[0] >>= 29;
+    number[3] = number[1];
+    number[1] >>= m;
+    number[1] <<= 3;
+    number[1] &= number[0];
+    number[0] = number[2];
+    number[2] <<= 32 - n;
+    number[2] >>= 32 - n;
+    number[0] >>= n + 3;
+    number[0] <<= n;
+    number[0] &= number[2];
+    number[1] <<= m;
+    number[3] <<= 32 - m;
+    number[3] >>= 32 - m;
+    number[1] &= number[3];
+
+    cout << "A == " << number[0] << endl;
+    cout << "B == " << number[1] << endl;
 
     cout << "Для продолжения нажмите ENTER...";
     _getch();
@@ -1337,7 +1469,7 @@ void menu(int menuSelection) {
     if (menuSelection == 18) {
         cout << "->";
     }
-    cout << "18.Лабораторная работа №10(доделать).\n";
+    cout << "18.Лабораторная работа №10.\n";
 
     if (menuSelection == 19) {
         cout << "->";
@@ -1352,7 +1484,7 @@ void menu(int menuSelection) {
     if (menuSelection == 21) {
         cout << "->";
     }
-    cout << "15.Лабораторная работа №7. Дополнительное задание №7.\n";
+    cout << "21.Лабораторная работа №8.\n";
 }
 
 void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
@@ -1441,7 +1573,7 @@ bool check(int checkSelection, bool checkVerification) {
             speedrun12();
         }
         if (checkSelection == 21) {
-            resizer();
+            speedrun8();
         }
     }
 
