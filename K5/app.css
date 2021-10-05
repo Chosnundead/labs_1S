@@ -1,0 +1,136 @@
+﻿.task1 {
+    display: block;
+}
+
+.task1 div {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.task1 div:nth-child(1) {
+    border: 5px outset rgb(255 0 0);
+    padding: 10px;
+}
+
+.task1 div:nth-child(2) {
+    border: 5px dashed rgb(0 255 33);
+    padding: 10px;
+}
+
+.task1 div:nth-child(3) {
+    border: 5px dotted rgb(0 38 255);
+    padding: 10px;
+}
+
+.task1 div:nth-child(4) {
+    border: 5px double rgb(0 255 255);
+    padding: 10px;
+}
+
+.task1 div:nth-child(5) {
+    border: 5px groove rgb(255 0 220);
+    padding: 10px;
+}
+
+.task1 div:nth-child(6) {
+    border: 5px inset rgb(255 216 0);
+    padding: 10px;
+}
+
+.task1 div:nth-child(7) {
+    border: 5px solid rgb(0 0 0);
+    padding: 10px;
+}
+
+.task2 p:nth-child(1) {
+    border: 5px solid #FF7F50;
+    margin: 5px;
+    padding: 5px;
+    background-color: #FFA500;
+    width: 400px;
+    text-align: center;
+}
+
+.task2 p:nth-child(2) {
+    border: 5px solid red;
+    border-radius: 20px 40px;
+    margin: 5px;
+    padding: 5px;
+    background-color: #FFA500;
+    box-shadow: inset 2px 2px 8px 8px rgba(0, 0, 0, .5) 
+}
+
+.task2 p:nth-child(3) {
+    border: 5px solid #FF6347;
+    margin: 5px;
+    padding: 5px;
+    background-color: #FFA500;
+}
+
+.task3 p:nth-child(1) {
+    border-left: 5px solid rgb(68 35 0);
+    border-bottom: 5px solid yellow;
+    border-right: 5px solid rgb(0 38 255);
+    border-top: 5px solid orange;
+    display: table;
+}
+
+.task3 p:nth-child(2) {
+    border-left: 5px solid #007BA7;
+    border-right: 5px solid #007BA7;
+    display: table;
+}
+
+.task3 p:nth-child(3) {
+    border: 5px dashed rgb(0 255 255);
+    border-top: 5px solid rgb(229 43 80);
+    display: table;
+}
+
+.task3 p:nth-child(4) {
+    border: 1px dotted orange;
+    display: table;
+}
+
+.task3 p:nth-child(5) {
+    border: 2px solid rgb(0 38 255);
+    border-left: 5px dashed darkred;
+    border-right: 5px dashed darkred;
+    display: table;
+}
+
+.task3 p:nth-child(6) {
+    border: 5px double #B3446C;
+    display: table;
+}
+
+.task3 p:nth-child(7) {
+    border-top: 1px dashed #808000;
+    border-bottom: 3px solid #FF7518;
+    display: table;
+}
+
+.task3 p:nth-child(8) {
+    border-left: 5px double #CC7722;
+    border-bottom: 5px double #CC7722;
+    display: table;
+}
+
+.task3 p:nth-child(9) {
+    border-right: 5px ridge #B5A642;
+    border-top: 5px ridge #B5A642;
+    border-radius: 5px 5px;
+    display: table;
+}
+
+.task3 p:nth-child(10) {
+    border-left: 5px dotted rgb(0 40 0);
+    border-right: 5px dotted rgb(0 40 0);
+    border-bottom: 5px dotted rgb(0 40 0);
+    display: table;
+}
+
+.task3 {
+    font-family: Calibri;
+    font-size: 21px;
+}

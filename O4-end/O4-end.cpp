@@ -3,11 +3,15 @@
 #include <string>
 #include <cmath>
 #include <ctime>
+#include "test.h"
 
 using namespace std;
 
 void speedrun8() {
     system("cls");
+
+    test test;
+    //delete test; Как?
 
     const int n = 200;
     double a = 8, b = 14, result1 = 0, h, x, s1, s2, result2 = 0, e = 0.0001, x1;
