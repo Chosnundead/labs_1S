@@ -1,10 +1,12 @@
 #include "test.h"
 #include <iostream>
 
+using namespace std;
+
 test::test(){
-	std::cout << "test of \"test.h\"\n";
+	
 }
 
 test::~test() {
-	std::cout << "delete \"test.h\"\n";
+	cout << "delete \"test.h\"\n";
 }

@@ -3,6 +3,7 @@
 #include <string>
 #include <cmath>
 #include <ctime>
+#include <windows.h>
 #include "test.h"
 
 using namespace std;
@@ -79,31 +80,55 @@ void speedrun8() {
 
 void speedrun12() {
     system("cls");
+    SetConsoleCP(1251);//!!!МАГИЯ ЕБ*Н*Я, ЗАПОМНИТЬ И ВСЕГДА ДЕЛАТЬ!!!
     
-    string lalala;
-    int in = 1;
+    string sentence;
+    int count = 1;//Вычесть 2 для тру количества
+
+    /*for (int i = -128; i <= 127; i++) {
+        cout << ((char)i) << " == " << i << endl;
+    }*/
 
     cout << "Введите ваше предложение: ";
-    getline(cin, lalala);
-    setlocale(LC_ALL, "russian");
+    getline(cin, sentence);
 
-    for (int i = 0; i < lalala.length(); i++) {
-        if ((lalala[i] >= 'А') && (lalala[i] <= 'я')) {
-            for (int j = i; j < lalala.length(); j++) {
+    for (int i = 0; i < sentence.length(); i++) {
+        if(((sentence[i] <= -1 && sentence[i] >= -64) || (sentence[i] == -88) || (sentence[i] == -72)) && (count % 2)){
+            while ((sentence[i] <= -1 && sentence[i] >= -64) || (sentence[i] == -88) || (sentence[i] == -72)) {
                 i++;
-                if (!(in % 2)) {
-                    lalala[i] = NULL;
-                }
-                if (!((lalala[i] >= 'А') && (lalala[i] <= 'я'))) {
-                    break;
-                }
             }
-            in++;
+            count++;
+        }
+        if (((sentence[i] <= -1 && sentence[i] >= -64) || (sentence[i] == -88) || (sentence[i] == -72)) && (!(count % 2))) {
+            while ((sentence[i] <= -1 && sentence[i] >= -64) || (sentence[i] == -88) || (sentence[i] == -72)) {
+                sentence[i] = NULL;
+                i++;
+            }
+            count++;
         }
     }
-    
-    //192 - 255
-    cout << lalala << endl;
+
+    cout << "Получившееся предложение: " << sentence << endl;
+
+    cout << "\t\t======666======\n";
+
+    cout << "Введите ваше предложение: ";
+    getline(cin, sentence);
+
+    for (int i = 0; i < sentence.length(); i++) {
+        if ((sentence[i] == '\'') || (sentence[i] == '\"')) {
+            sentence[i] = NULL;
+            i++;
+            while (!((sentence[i] == '\'') || (sentence[i] == '\"'))) {
+                sentence[i] = NULL;
+                i++;
+            }
+            sentence[i] = NULL;
+            i++;
+        }
+    }
+
+    cout << "Получившееся предложение: " << sentence << endl;
 
     cout << "Для продолжения нажмите ENTER...";
     _getch();
@@ -157,94 +182,151 @@ void speedrun11() {
 
 void speedrun10() {
     system("cls");
-
-    int number[4];
-    int n, p, m;
+    
+    int number[2];
+    char numberTwo[3][33];
+    int temp[2] = { 0, 0 };
+    int position[2];
+    int numberOfBits;
+    bool isCorrect;
 
     cout << "A == ";
     cin >> number[0];
     cout << "B == ";
     cin >> number[1];
 
-    number[2] = number[0];
-    number[0] >>= 5;
-    number[0] <<= 30;
-    number[0] >>= 30;
-    number[3] = number[1];
-    number[1] >>= 5;
-    number[1] <<= 2;
-    number[1] &= number[0];
-    number[0] = number[2];
-    number[2] <<= 27;
-    number[2] >>= 27;
-    number[0] >>= 7;
-    number[0] <<= 5;
-    number[0] &= number[2];
-    number[1] <<= 5;
-    number[3] <<= 27;
-    number[3] >>= 27;
-    number[1] &= number[3];
-
-    cout << "A == " << number[0] << endl;
-    cout << "B == " << number[1] << endl;
-
-    cout << "n == ";
-    cin >> n;
-    cout << "p == ";
-    cin >> p;
-
-    number[2] = p - n;
-
-    while (number[2] < p) {
-        number[0] |= (1 << number[2]);
-        number[2]++;
+    _itoa_s(number[0], numberTwo[0], 2);
+    _itoa_s(number[1], numberTwo[1], 2);
+    cout << "A == " << numberTwo[0] << endl;
+    cout << "B == " << numberTwo[1] << endl;
+    
+    for (int i = 0; i < 5; i++) {//В temp[0] сохраняется первые 5 битов A, аналогично в temp[1] с B
+        temp[0] = temp[0] + (number[0] & (1 << i));
+        temp[1] = temp[1] + (number[1] & (1 << i));
     }
 
-    cout << "A == ";
-    cin >> number[0];
-    number[2] = 0;
+    number[0] >>= 5;
+    number[1] >>= 5;
+    number[1] <<= 2;
 
-    for (int i = 5; i <= 10; i++) {
-        number[1] = 0;
-        number[1] |= (1 << i);
-        number[1] &= number[0];
-        if (number[1]) {
-            number[2]++;
+    for (int i = 0; i < 2; i++) {
+        number[1] = number[1] + (number[0] & (1 << i));
+    }
+
+    number[0] >>= 2;
+    number[0] <<= 5;
+    number[1] <<= 5;
+
+    for (int i = 0; i < 5; i++) {
+        number[0] = number[0] + (temp[0] & (1 << i));
+        number[1] = number[1] + (temp[1] & (1 << i));
+    }
+
+    _itoa_s(number[0], numberTwo[0], 2);
+    _itoa_s(number[1], numberTwo[1], 2);
+    cout << "A == " << numberTwo[0] << endl;
+    cout << "B == " << numberTwo[1] << endl;
+    
+    cout << "\t\t======666======\n";
+
+    _itoa_s(number[0], numberTwo[0], 2);
+    cout << "A == " << numberTwo[0] << endl;
+
+    do {
+        cout << "n == ";
+        cin >> numberOfBits;
+        cout << "p == ";
+        cin >> position[0];
+
+        if (numberOfBits > position[0]) {
+            cout << "Введите правильные данные!\n";
+            isCorrect = true;
+        } else {
+            isCorrect = false;
+        }
+    } while (isCorrect);
+    
+    temp[0] = 0;
+    for (int i = 0; i < (position[0] - numberOfBits); i++) {
+        temp[0] = temp[0] + (number[0] & (1 << i));
+    }
+
+    number[0] >>= position[0];
+    number[0] <<= numberOfBits;
+
+    for (int i = 0; i < numberOfBits; i++) {
+        number[0] = number[0] + (1 << i);
+    }
+
+    number[0] <<= position[0] - numberOfBits;
+
+    for (int i = 0; i < (position[0] - numberOfBits); i++) {
+        number[0] = number[0] + (temp[0] & (1 << i));
+    }
+
+    _itoa_s(number[0], numberTwo[0], 2);
+    cout << "A == " << numberTwo[0] << endl;
+
+    cout << "\t\t======666======\n";
+
+    _itoa_s(number[0], numberTwo[0], 2);
+    cout << "A == " << numberTwo[0] << endl;
+
+    temp[0] = 0;
+    for (int i = 5; i < 11; i++) {
+        if (number[0] & (1 << i)) {
+            temp[0]++;
         }
     }
 
-    cout << "Кол-во единиц в A с 5 по 10 бит: " << number[2] << endl;
+    cout << temp[0] << " единиц(а\\ы) в числе с 5 по 10 бит, включая эти биты.\n";
 
-    cout << "A == ";
-    cin >> number[0];
-    cout << "B == ";
-    cin >> number[1];
+    cout << "\t\t======666======\n";
+
     cout << "n == ";
-    cin >> n;
+    cin >> position[0];
     cout << "m == ";
-    cin >> m;
+    cin >> position[1];
 
-    number[2] = number[0];
-    number[0] >>= n;
-    number[0] <<= 29;
-    number[0] >>= 29;
-    number[3] = number[1];
-    number[1] >>= m;
+    _itoa_s(number[0], numberTwo[0], 2);
+    _itoa_s(number[1], numberTwo[1], 2);
+    cout << "A == " << numberTwo[0] << endl;
+    cout << "B == " << numberTwo[1] << endl;
+
+    temp[0] = 0;
+    for (int i = 0; i < position[0]; i++) {
+        temp[0] = temp[0] + (number[0] & (1 << i));
+    }
+
+    temp[1] = 0;
+    for (int i = 0; i < position[1]; i++) {
+        temp[1] = temp[1] + (number[1] & (1 << i));
+    }
+
+    number[0] >>= position[0];
+    number[1] >>= position[1];
     number[1] <<= 3;
-    number[1] &= number[0];
-    number[0] = number[2];
-    number[2] <<= 32 - n;
-    number[2] >>= 32 - n;
-    number[0] >>= n + 3;
-    number[0] <<= n;
-    number[0] &= number[2];
-    number[1] <<= m;
-    number[3] <<= 32 - m;
-    number[3] >>= 32 - m;
-    number[1] &= number[3];
 
-    cout << "A == " << number[0] << endl;
-    cout << "B == " << number[1] << endl;
+    for (int i = 0; i < 3; i++) {
+        number[1] = number[1] + (number[0] & (1 << i));
+    }
+
+    number[0] >>= 3;
+    number[0] <<= position[0];
+    number[1] <<= position[1];
+
+    for (int i = 0; i < position[0]; i++) {
+        number[0] = number[0] + (temp[0] & (1 << i));
+    }
+
+    for (int i = 0; i < position[1]; i++) {
+        number[1] = number[1] + (temp[1] & (1 << i));
+    }
+
+    _itoa_s(number[0], numberTwo[0], 2);
+    _itoa_s(number[1], numberTwo[1], 2);
+    cout << "A == " << numberTwo[0] << endl;
+    cout << "B == " << numberTwo[1] << endl;
 
     cout << "Для продолжения нажмите ENTER...";
     _getch();
@@ -1483,7 +1565,7 @@ void menu(int menuSelection) {
     if (menuSelection == 20) {
         cout << "->";
     }
-    cout << "20.Лабораторная работа №12(доделать).\n";
+    cout << "20.Лабораторная работа №12.\n";
 
     if (menuSelection == 21) {
         cout << "->";
