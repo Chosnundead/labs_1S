@@ -8,11 +8,161 @@
 
 using namespace std;
 
-void speedrun8() {
+void speedrun16() {
+    system("cls");
+
+    //Сделать через отдельный header файл!!!
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void speedrun15() {
+    system("cls");
+
+    cout << "Главная шутка в том, что я это делал изначально через отдельные функции, динамические массивы и пользуясь указателями где надо => всё готово без необходимости что-либо делать.\n";
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void speedrun14() {
+    system("cls");
+
+    int size, sum = 0, start, end, sizex, sizey;
+    bool isntCorrect, isCheck;
+
+    do {
+        cout << "Введите размер массива: ";
+        cin >> size;
+
+        if (size < 1) {
+            system("cls");
+            cout << "Вы введи неверный размер массива(size >= 1)!\n";
+            isntCorrect = true;
+        } else {
+            isntCorrect = false;
+        }
+    } while (isntCorrect);
+
+    srand(time(0));
+    
+    int* arr = new int[size];
+
+    for (int i = 0; i < size; i++) {
+        arr[i] = rand() - rand();
+        cout << "arr[" << i << "] == " << arr[i] << endl;
+    }
+
+    for (int i = 0; i < size; i++) {
+        if (!((i + 1) % 2)) {
+            sum += arr[i];
+        }
+    }
+
+    cout << "Сумма четных элементов равна: " << sum << endl;
+    sum = 0;
+
+    for (int i = 0; i < size; i++) {
+        if (arr[i] < 0) {
+            start = i;
+            break;
+        }
+    }
+
+    for (int i = (size - 1); i >= 0; i--) {
+        if (arr[i] < 0) {
+            end = i;
+            break;
+        }
+    }
+
+    if ((start == end) || ((start + 1) == end)) {
+        cout << "Ошибка, слишком малое расстояние между отрицательными числами.\n";
+    } else {
+        start++;
+        while (start < end) {
+            sum += arr[start];
+            start++;
+        }
+        cout << "Сумма между орицательными числами равна: " << sum << endl;
+    }
+
+    do {
+        cout << "Введите количество по оси Oy: ";
+        cin >> sizey;
+        cout << "Введите количество по оси Ox: ";
+        cin >> sizex;
+
+        if ((sizey < 1) && (sizex < 1)) {
+            isntCorrect = true;
+            system("cls");
+            cout << "Введите корректный размер матрицы(sizex && sizey >= 1)!\n";
+        }
+        else {
+            isntCorrect = false;
+        }
+    } while (isntCorrect);
+
+    int** matrix = new int* [sizey];
+    for (int i = 0; i < sizey; i++) {
+        matrix[i] = new int[sizex];
+    }
+
+    for (int i = 0; i < sizey; i++) {
+        for (int j = 0; j < sizex; j++) {
+            matrix[i][j] = (rand() % 3);
+            cout << matrix[i][j] << "\t";
+        }
+        cout << "\n\t\t======666======\n";
+    }
+
+    for (int i = 0; i < sizey; i++) {
+        isCheck = true;
+        for (int j = 0; j < sizex; j++) {
+            if ((matrix[i][j] == 0) && (isCheck)) {
+                isCheck = true;
+            } else {
+                isCheck = false;
+            }
+        }
+        if (isCheck) {
+            if (i > sizex) {
+                cout << "Ошибка Oy с нулями больше количества Ox!\n";
+                break;
+            }
+            for (int re = 0; re < sizey; re++) {
+                matrix[re][i] /= 2;
+            }
+            break;
+        }
+    }
+
+    cout << "Новый массив:\n";
+
+    for (int i = 0; i < sizey; i++) {
+        for (int j = 0; j < sizex; j++) {
+            cout << matrix[i][j] << "\t";
+        }
+        cout << "\n\t\t======666======\n";
+    }
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void speedrun13() {
     system("cls");
 
     test test;
-    //delete test; Как?
+    //delete test test; Как это работает(деструктор)
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void speedrun8() {
+    system("cls");
 
     const int n = 200;
     double a = 8, b = 14, result1 = 0, h, x, s1, s2, result2 = 0, e = 0.0001, x1;
@@ -1571,18 +1721,38 @@ void menu(int menuSelection) {
         cout << "->";
     }
     cout << "21.Лабораторная работа №8.\n";
+
+    if (menuSelection == 22) {
+        cout << "->";
+    }
+    cout << "22.Лабораторная работа №13.\n";
+
+    if (menuSelection == 23) {
+        cout << "->";
+    }
+    cout << "23.Лабораторная работа №14.\n";
+
+    if (menuSelection == 24) {
+        cout << "->";
+    }
+    cout << "24.Лабораторная работа №15.\\\\Сделаная заранее XD\n";
+
+    if (menuSelection == 25) {
+        cout << "->";
+    }
+    cout << "25.Лабораторная работа №16.\\\\Доделать\n";
 }
 
 void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
     switch (_getch()) {
     case 72:
         if (*inputSelection == 1)
-            *inputSelection = 21;
+            *inputSelection = 25;
         else
             *inputSelection = *inputSelection - 1;
         break;
     case 80:
-        if (*inputSelection == 21)
+        if (*inputSelection == 25)
             *inputSelection = 1;
         else
             *inputSelection = *inputSelection + 1;
@@ -1660,6 +1830,18 @@ bool check(int checkSelection, bool checkVerification) {
         }
         if (checkSelection == 21) {
             speedrun8();
+        }
+        if (checkSelection == 22) {
+            speedrun13();
+        }
+        if (checkSelection == 23) {
+            speedrun14();
+        }
+        if (checkSelection == 24) {
+            speedrun15();
+        }
+        if (checkSelection == 25) {
+            speedrun16();
         }
     }
 
