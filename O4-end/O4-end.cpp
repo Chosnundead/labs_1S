@@ -5,13 +5,14 @@
 #include <ctime>
 #include <windows.h>
 #include "test.h"
+#include "lab16.h"
 
 using namespace std;
 
 void speedrun16() {
     system("cls");
 
-    //Сделать через отдельный header файл!!!
+    lab16 lab16;
 
     cout << "Для продолжения нажмите ENTER...";
     _getch();
@@ -1740,7 +1741,7 @@ void menu(int menuSelection) {
     if (menuSelection == 25) {
         cout << "->";
     }
-    cout << "25.Лабораторная работа №16.\\\\Доделать\n";
+    cout << "25.Лабораторная работа №16.\n";
 }
 
 void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
