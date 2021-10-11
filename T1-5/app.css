@@ -1,0 +1,22 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+@font-face {
+    font-family: 'Goth';
+    src: url('fonts/Goth.ttf');
+}
+
+#txt {
+    background: #f0f0f0;
+    margin: 1%;
+    color: darkslategray;
+}
+
+#center {
+    text-align: center;
+}
+
+#name {
+    background-color: orangered;
+}

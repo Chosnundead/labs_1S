@@ -6,8 +6,28 @@
 #include <windows.h>
 #include "test.h"
 #include "lab16.h"
+#include "lab17.h"
+#include "lab18.h"
 
 using namespace std;
+
+void speedrun18() {
+    system("cls");
+
+    lab18 lab18;
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
+
+void speedrun17() {
+    system("cls");
+
+    lab17 lab17;
+
+    cout << "Для продолжения нажмите ENTER...";
+    _getch();
+}
 
 void speedrun16() {
     system("cls");
@@ -1742,18 +1762,28 @@ void menu(int menuSelection) {
         cout << "->";
     }
     cout << "25.Лабораторная работа №16.\n";
+
+    if (menuSelection == 26) {
+        cout << "->";
+    }
+    cout << "26.Лабораторная работа №17.\n";
+
+    if (menuSelection == 27) {
+        cout << "->";
+    }
+    cout << "27.Лабораторная работа №18.\n";
 }
 
 void input(int *inputSelection, bool *inputVerification, bool *inputBreak) {
     switch (_getch()) {
     case 72:
         if (*inputSelection == 1)
-            *inputSelection = 25;
+            *inputSelection = 27;
         else
             *inputSelection = *inputSelection - 1;
         break;
     case 80:
-        if (*inputSelection == 25)
+        if (*inputSelection == 27)
             *inputSelection = 1;
         else
             *inputSelection = *inputSelection + 1;
@@ -1843,6 +1873,12 @@ bool check(int checkSelection, bool checkVerification) {
         }
         if (checkSelection == 25) {
             speedrun16();
+        }
+        if (checkSelection == 26) {
+            speedrun17();
+        }
+        if (checkSelection == 27) {
+            speedrun18();
         }
     }
 

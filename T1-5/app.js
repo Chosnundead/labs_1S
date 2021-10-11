@@ -374,3 +374,52 @@ function lab4Task3() {
     console.log("car.numberFuel is " + (typeof car.numberFuel));
     console.log("car.numberRate is " + (typeof car.numberRate));
 }
+
+function lab5TaskFrom1To3() {
+    for (let i = 0; i < document.all.length; i++) {
+        let temp = document.all[i];
+        console.log((i + 1) + ": " + temp.tagName);
+    }
+
+    console.log("\t\t======666======");
+
+    for (let i = 0; i < document.body.childNodes.length; i++) {
+        if (i % 2) {
+            let temp = document.body.childNodes[i];
+            console.log(temp);
+        }
+    }
+
+    console.log("\t\t======666======");
+
+    console.log("Через доступ all:");
+    let isFirst = true;
+    for (let i = 0; i < document.all.length; i++) {
+        let temp = document.all[i];
+        if ((temp.tagName == "SPAN") && isFirst) {
+            console.log(temp);
+            isFirst = false;
+        }
+    }
+
+    console.log("Через частную коллекцию span:");
+    let temp = document.getElementsByTagName('span');
+    console.log(temp[0]);
+
+    console.log("Через идентификатор элемента:");
+    console.log(document.getElementById("name"));
+}
+
+function lab5Task4() {
+    let temp = document.getElementById("change");
+    let sum = 0;
+    let number = 0;
+    for (let i = 1; i < temp.childNodes.length; i++) {
+        sum += Number(temp.childNodes[i].textContent);
+        number++;
+    }
+    let result = sum / number;
+    temp = document.getElementsByTagName("span");
+    temp[0].textContent = "Среднее количество ядерного оружия с 1947 по 2018: " + result + "ед.";
+    temp[0].style = "color: red; text-shadow: 2px 2px 3px darkred; font-size: 21px; font-family: Goth; background-color: darkgrey;";
+}

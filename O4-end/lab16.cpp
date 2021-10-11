@@ -52,7 +52,7 @@ void lab16::_spasiboZaPoiasneniiaKVashimLaboratornimRabotamKotorieNapisaniNaSiAN
 	int shiftOy = 0;
 	for (int i = 0; i < number; i++) {
 		shiftOy = 1;
-		for (int j = 0; j < (size - shiftOy); j++) {
+		for (int j = 0; j < (size - shiftOy); j++) {//В этой х#йне ошибка(исправленная в 17ой лабе) 
 			sumOfElements[i] += matrix[i][shiftOy][j];
 			shiftOy++;
 		}
