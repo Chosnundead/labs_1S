@@ -376,16 +376,16 @@ function lab4Task3() {
 }
 
 function lab5TaskFrom1To3() {
-    for (let i = 0; i < document.all.length; i++) {
-        let temp = document.all[i];
-        console.log((i + 1) + ": " + temp.tagName);
+    for (let numberOfHtmlElement = 0; numberOfHtmlElement < document.all.length; numberOfHtmlElement++) {
+        let temp = document.all[numberOfHtmlElement];
+        console.log((numberOfHtmlElement + 1) + ": " + temp.tagName);
     }
 
     console.log("\t\t======666======");
 
-    for (let i = 0; i < document.body.childNodes.length; i++) {
-        if (i % 2) {
-            let temp = document.body.childNodes[i];
+    for (let numberOfBodysChild = 0; numberOfBodysChild < document.body.childNodes.length; numberOfBodysChild++) {
+        if (numberOfBodysChild % 2) {
+            let temp = document.body.childNodes[numberOfBodysChild];
             console.log(temp);
         }
     }
@@ -394,8 +394,8 @@ function lab5TaskFrom1To3() {
 
     console.log("Через доступ all:");
     let isFirst = true;
-    for (let i = 0; i < document.all.length; i++) {
-        let temp = document.all[i];
+    for (let numberOfHtmlElement = 0; numberOfHtmlElement < document.all.length; numberOfHtmlElement++) {
+        let temp = document.all[numberOfHtmlElement];
         if ((temp.tagName == "SPAN") && isFirst) {
             console.log(temp);
             isFirst = false;
@@ -414,8 +414,8 @@ function lab5Task4() {
     let temp = document.getElementById("change");
     let sum = 0;
     let number = 0;
-    for (let i = 1; i < temp.childNodes.length; i++) {
-        sum += Number(temp.childNodes[i].textContent);
+    for (let numberOfTempsChild = 1; numberOfTempsChild < temp.childNodes.length; numberOfTempsChild++) {
+        sum += Number(temp.childNodes[numberOfTempsChild].textContent);
         number++;
     }
     let result = sum / number;

@@ -1,0 +1,63 @@
+﻿body {
+    background: linear-gradient( cyan, transparent ), linear-gradient( -45deg, magenta, transparent ), linear-gradient( 45deg, yellow, transparent );
+    background-blend-mode: multiply;
+    background-repeat: space;
+}
+
+.container {
+    display: block;
+    border-bottom: 10px solid black;
+    padding: 0px;
+    margin: 0px;
+    width: 1440px;
+    text-align: center;
+}
+
+.image {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    border-left: 2px solid darkred;
+    border-right: 2px solid darkred;
+}
+
+.container .image:nth-of-type(1) {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    border-left: 0px;
+}
+
+.container .image:nth-of-type(4) {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    border-right: 0px;
+}
+
+.image img {
+    height: 200px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.image figure {
+    margin: 0px;
+    padding: 0px;
+}
+
+.image figure figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 0px;
+    margin-top: -5px;
+    text-align: center;
+}
+
+body h2 {
+    text-align: center;
+    font-size: 33px;
+    font-family: Arial;
+    text-shadow: 2px 2px 3px white;
+}
