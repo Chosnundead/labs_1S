@@ -45,4 +45,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="fileA.txt" />
+    <Text Include="fileB.txt" />
+    <Text Include="fileC.txt" />
+  </ItemGroup>
 </Project>
