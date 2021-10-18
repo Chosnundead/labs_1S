@@ -73,6 +73,13 @@
     <Content Include="package.json" />
     <Content Include="page0.html" />
     <Content Include="page1.html" />
+    <Content Include="page2\css\style0ForScript2.css" />
+    <Content Include="page2\css\style2.css" />
+    <Content Include="page2\js\script2.js" />
+    <Content Include="page2\page2.html" />
+    <Content Include="page3\css\style3.css" />
+    <Content Include="page3\js\script3.js" />
+    <Content Include="page3\page3.html" />
     <Content Include="webpack.config.js" />
     <Content Include="package-lock.json" />
     <Content Include="fonts\ofont.ru_Schwabacher.ttf" />

@@ -1,0 +1,8 @@
+﻿input {
+    background: linear-gradient( cyan, transparent ), linear-gradient( -45deg, magenta, transparent ), linear-gradient( 45deg, yellow, transparent );
+    background-blend-mode: multiply;
+    background-repeat: space;
+    color: white;
+    font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;
+}

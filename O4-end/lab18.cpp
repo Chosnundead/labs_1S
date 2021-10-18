@@ -37,7 +37,7 @@ lab18::lab18() {
 		getline(FileARead, numbersAsString);
 		FileARead.close();
 
-		temp = 0;//Число отвечающее за номер строки с числом
+		temp = 0;//число отвечающее за номер строки с числом
 		for (int positionInStringOfNumbers = 0; positionInStringOfNumbers < numbersAsString.length(); positionInStringOfNumbers++) {
 			while (numbersAsString[positionInStringOfNumbers] != ' ') {
 				numberAsString[temp] += numbersAsString[positionInStringOfNumbers];
@@ -53,7 +53,7 @@ lab18::lab18() {
 		}
 
 		isMoreThanOne = false;
-		temp = 0;
+		temp = 0;//число отвечающее за кол-во повторов числа
 		for (int positionOfNumberInArray = 0; positionOfNumberInArray < numberOfNumbers; positionOfNumberInArray++) {
 			for (int numberCheck = 0; numberCheck < numberOfNumbers; numberCheck++) {
 				if (arrayOfNumbers[positionOfNumberInArray] == arrayOfNumbers[numberCheck]) {

@@ -23,7 +23,7 @@ function summation() {
 
 function result() {
     let number1, number2, answer;
-    
+
     number1 = (35 * 1 - 25 * 21) / 5 + 232;
     number2 = 8 * (1 / 21 + 5 * 21 / (1 - 43) * 6);
     answer = number1 % number2;
@@ -178,7 +178,7 @@ function lab3Task2() {
     let arr = ["pow", "pop", "push", "shift", "round", "floor", "sline", "sort"];
     let arrMath = [];
     let arrArray = [];
-    
+
     for (let i = 0; i < arr.length; i++) {
         if (Array.prototype.hasOwnProperty(arr[i])) {
             arrArray.push(arr[i]);

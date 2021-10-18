@@ -4,7 +4,7 @@
 
 .s {
     font-style: italic;
-    font-family:'Franklin Gothic';
+    font-family: 'Franklin Gothic';
     color: coral;
     font-size: 50px;
     background-color: black;
@@ -13,6 +13,7 @@
 .center {
     text-align: center;
 }
+
 
 body div:nth-of-type(1) p {
     margin-left: 50px;
