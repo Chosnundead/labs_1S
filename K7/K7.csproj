@@ -71,6 +71,7 @@
   <ItemGroup>
     <Content Include="img\img0.png" />
     <Content Include="img\img1.jpg" />
+    <Content Include="img\img10.jpg" />
     <Content Include="img\img2.jpg" />
     <Content Include="img\img3.jpg" />
     <Content Include="img\img4.jpg" />

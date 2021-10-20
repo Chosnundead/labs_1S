@@ -153,3 +153,174 @@ span {
         background-image: url("img/img5.jfif");
     }
 }
+
+.task5Border {
+    border: 5px groove red;
+}
+
+.task5 img {
+    height: 150px;
+    width: 100px;
+}
+
+#borderOne {
+    width: 300px;
+    border: 5px groove red;
+}
+
+#one {
+    animation-name: task5Anim0;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 300px;
+}
+
+@keyframes task5Anim0 {
+    0% {
+        padding-left: 0px;
+    }
+
+    50% {
+        padding-left: 200px;
+    }
+
+    100% {
+        padding-left: 0px;
+    }
+}
+
+
+#borderTwo {
+    width: 100px;
+    height: 350px;
+    border: 5px groove red;
+}
+
+#two {
+    animation-name: task5Anim1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes task5Anim1 {
+    0% {
+        margin-top: 0px;
+    }
+
+    50% {
+        margin-top: 200px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}
+
+#borderThree {
+    width: 300px;
+    height: 350px;
+    border: 5px groove red;
+}
+
+#three {
+    animation-name: task5Anim2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    max-width: 300px;
+    max-height: 350px;
+}
+
+@keyframes task5Anim2 {
+    0% {
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+    25% {
+        padding-top: 150px;
+        padding-left: 50px;
+    }
+
+    50% {
+        padding-top: 200px;
+        padding-left: 200px;
+    }
+
+    75% {
+        padding-top: 50px;
+        padding-left: 150px;
+    }
+
+    100% {
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+}
+
+
+#borderFour {
+    width: 300px;
+    height: 350px;
+    border: 5px groove red;
+}
+
+#four {
+    animation-name: task5Anim3;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    max-width: 300px;
+    max-height: 350px;
+}
+
+@keyframes task5Anim3 {
+    0% {
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+
+    25% {
+        padding-top: 200px;
+        padding-left: 0px;
+    }
+
+    50% {
+        padding-top: 200px;
+        padding-left: 200px;
+    }
+
+    75% {
+        padding-top: 0px;
+        padding-left: 200px;
+    }
+
+    100% {
+        padding-top: 0px;
+        padding-left: 0px;
+    }
+}
+
+.task6 {
+    animation-name: task6;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    text-align: center;
+}
+
+@keyframes task6 {
+    0% {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    50% {
+        color: rgba(0, 0, 0, 0.80);
+    }
+
+    100% {
+        color: rgba(0, 0, 0, 0);
+    }
+}
