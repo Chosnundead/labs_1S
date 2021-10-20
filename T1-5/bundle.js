@@ -423,8 +423,6 @@ function lab5Task4() {
   temp[0].textContent = "Среднее количество ядерного оружия с 1947 по 2018: " + result + "ед.";
   temp[0].style = "color: red; text-shadow: 2px 2px 3px darkred; font-size: 21px; font-family: Goth; background-color: darkgrey;";
 }
-
-function lab6Task1() {}
 /******/ })()
 ;
 //# sourceMappingURL=bundle.js.map
