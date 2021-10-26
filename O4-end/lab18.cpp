@@ -32,7 +32,7 @@ lab18::lab18() {
 			FileAWrite << arrayOfNumbers[countOfNumberOfNumbers] << " ";
 		}
 		FileAWrite.close();
-		
+
 		FileARead.open("fileA.txt", ios::out);
 		getline(FileARead, numbersAsString);
 		FileARead.close();
@@ -91,7 +91,8 @@ lab18::lab18() {
 		}
 
 		FileCWrite.close();
-	} catch (...) {
+	}
+	catch (...) {
 		cout << "¬ведены неверные данные!\n";
 	}
 }

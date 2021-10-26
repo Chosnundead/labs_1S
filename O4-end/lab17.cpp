@@ -88,7 +88,8 @@ lab17::lab17() {
 		result = (temp[0] + temp[1]) / 2;
 		if ((((5 * result) - 1 + pow(result, 3)) * ((5 * temp[0]) - 1 + pow(temp[0], 3))) <= 0) {
 			temp[1] = result;
-		} else { 
+		}
+		else {
 			temp[0] = result;
 		}
 	} while (abs((temp[0] - temp[1])) > (2 * e));

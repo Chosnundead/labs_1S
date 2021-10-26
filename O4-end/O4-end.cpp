@@ -770,7 +770,6 @@ void subsequence() {
 	even.input();
 
 	for (int i = 0; i < even.numbers.length(); i++) {
-
 		if ((even.numbers[i] == ' ') || (i == 0)) {
 			if (i == 0) {
 				even.tempNumbers[1] = 0;//Начало считывания

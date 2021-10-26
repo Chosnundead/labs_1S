@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'Carveat';
-    src:url('fonts/Caveat.woff');
+    src: url('fonts/Caveat.woff');
 }
 
 @font-face {
@@ -46,12 +46,12 @@ p {
     font-size: 20px;
 }
 
-p::first-letter {
-    font-weight: bold;
-    font-size: 45px;
-    color: white;
-    background-color: hsla(275, 100%, 10%, 1);
-}
+    p::first-letter {
+        font-weight: bold;
+        font-size: 45px;
+        color: white;
+        background-color: hsla(275, 100%, 10%, 1);
+    }
 
 li {
     list-style-type: none;
@@ -60,10 +60,10 @@ li {
     font-size: 20px;
 }
 
-li::before {
-    content: counter(item, upper-roman) ". ";
-    color: blue;
-}
+    li::before {
+        content: counter(item, upper-roman) ". ";
+        color: blue;
+    }
 
 .noMargin {
     margin-bottom: 0px;

@@ -7,50 +7,50 @@
     empty-cells: hide;
 }
 
-.task1 tr td:first-child {
-    background-color: red;
-}
+    .task1 tr td:first-child {
+        background-color: red;
+    }
 
-.task1 tr:first-child {
-    background-color: yellow;
-}
+    .task1 tr:first-child {
+        background-color: yellow;
+    }
 
 .task2 {
     empty-cells: hide;
 }
 
-.task2 tr td {
-    border: 2px ridge grey;
-}
+    .task2 tr td {
+        border: 2px ridge grey;
+    }
 
-.task2 #lol td {
-    background-color: darkblue;
-    color: white;
-}
+    .task2 #lol td {
+        background-color: darkblue;
+        color: white;
+    }
 
-.task2 thead td:first-child {
-    background-color: none;
-}
+    .task2 thead td:first-child {
+        background-color: none;
+    }
 
-.task2 tr td:nth-child(2) {
-    background-color: lightskyblue;
-    color: white;
-}
+    .task2 tr td:nth-child(2) {
+        background-color: lightskyblue;
+        color: white;
+    }
 
-.task2 tr td:nth-child(3) {
-    background-color: purple;
-    color: white;
-}
+    .task2 tr td:nth-child(3) {
+        background-color: purple;
+        color: white;
+    }
 
-.task2 tr td:nth-child(4) {
-    background-color: green;
-    color: white;
-}
+    .task2 tr td:nth-child(4) {
+        background-color: green;
+        color: white;
+    }
 
-.task2 caption {
-    text-align: center;
-    font-size: 1.2em;
-}
+    .task2 caption {
+        text-align: center;
+        font-size: 1.2em;
+    }
 
 .task3 thead tr td {
     background-color: red;

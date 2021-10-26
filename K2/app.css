@@ -12,11 +12,13 @@ body {
     font-family: 'Times New Roman';
     font-size: 18pt;
 }
+
 .taskTwo {
     color: yellow;
     font-family: 'Times New Roman';
     font-size: 20pt;
 }
+
 .taskThree {
     color: green;
     font-family: 'Times New Roman';

@@ -4,7 +4,7 @@
 
 using namespace std;
 
-test::test(){
+test::test() {
 	int size, minimum, sum;
 	bool isntBreak;
 
@@ -16,7 +16,8 @@ test::test(){
 			isntBreak = true;
 			system("cls");
 			cout << "¬ведите корректный размер матрицы(size >= 3)!\n";
-		} else {
+		}
+		else {
 			isntBreak = false;
 		}
 	} while (isntBreak);

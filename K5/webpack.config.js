@@ -21,7 +21,7 @@
                     options: {
                         presets: [
                             // Tell Babel what to target: 'defaults' includes ES5, so IE will (usually) work
-                            ["@babel/preset-env", { 
+                            ["@babel/preset-env", {
                                 "targets": "defaults"
                             }],
                             "@babel/preset-react"  // Supports React

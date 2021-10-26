@@ -18,7 +18,8 @@ void lab16::_spasiboZaPoiasneniiaKVashimLaboratornimRabotamKotorieNapisaniNaSiAN
 			system("cls");
 			cout << "Вы ввели не корректные значения((size >= 2) && (nummber >= 1))!\n";
 			isntBreak = true;
-		} else {
+		}
+		else {
 			isntBreak = false;
 		}
 	} while (isntBreak);
@@ -52,7 +53,7 @@ void lab16::_spasiboZaPoiasneniiaKVashimLaboratornimRabotamKotorieNapisaniNaSiAN
 	int shiftOy = 0;
 	for (int i = 0; i < number; i++) {
 		shiftOy = 1;
-		for (int j = 0; j < (size - shiftOy); j++) {//В этой х#йне ошибка(исправленная в 17ой лабе) 
+		for (int j = 0; j < (size - shiftOy); j++) {//В этой х#йне ошибка(исправленная в 17ой лабе)
 			sumOfElements[i] += matrix[i][shiftOy][j];
 			shiftOy++;
 		}
@@ -99,7 +100,7 @@ void lab16::_input(int* size, bool* isntBreak) {
 
 lab16::lab16() {
 	_input(&size, &isntBreak);
-	
+
 	int** matrix = new int* [size];
 	for (int i = 0; i < size; i++) {
 		matrix[i] = new int[size];
@@ -111,7 +112,7 @@ lab16::lab16() {
 	int minimumSum = 0;
 	for (int i = 0; i < size; i++) {
 		matrix[i][i] += minimumSum;
-	}	
+	}
 
 	for (int shiftOy = 0; shiftOy < size; shiftOy++) {
 		for (int i = 0; i < (size - shiftOy); i++) {
