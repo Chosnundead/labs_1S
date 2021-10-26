@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K6", "K6\K6.csproj", "{D1B7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K7", "K7\K7.csproj", "{BBFC9277-59F9-4D36-9090-B5D4F7D4837B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T1-6", "T1-6\T1-6.csproj", "{FB70003A-F472-4973-B67F-345B88A0F876}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T1-7", "T1-7\T1-7.csproj", "{FB70003A-F472-4973-B67F-345B88A0F876}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

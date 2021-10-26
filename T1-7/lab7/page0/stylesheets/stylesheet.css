@@ -1,0 +1,30 @@
+﻿body {
+    background-color: #93AB85;
+    color: #413D35;
+}
+
+.form {
+    display: flex;
+    width: 452px;
+    margin: 0px;
+    padding: 0px;
+    border: 5px solid #951615;
+    margin-bottom: 5px;
+    justify-content: space-evenly;
+}
+
+.out {
+    width: 410px;
+    margin: 0px;
+    padding: 21px;
+    border: 5px solid #951615;
+    margin-bottom: 5px;
+}
+
+#header-out {
+    text-align: center;
+}
+
+#info-out {
+    text-indent: 1.5em;
+}

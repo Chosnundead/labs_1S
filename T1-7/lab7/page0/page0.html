@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" />
+    <title></title>
+</head>
+<body>
+    <form class="form">
+        <fieldset>
+            <legend>Форма</legend>
+            <div>
+                <textarea id="header">Факультет Информационных Технологий</textarea>
+            </div>
+            <div>
+                <input type='text' value="Имя" /><br />
+                <input type='text' value="Фамилия" id="secondName" /><br />
+            </div>
+            <div>
+                Специальность:<br />
+                <select id="specialization">
+                    <option>
+                        ИСиТ
+                    </option>
+                    <option>
+                        ПОИТ
+                    </option>
+                    <option>
+                        ПОИБМС
+                    </option>
+                    <option>
+                        ДЭВИ
+                    </option>
+                </select>
+            </div>
+            <div>
+                Курс:<br />
+                <input type="radio" name="course" value="1" id="isCourse" />1
+                <input type="radio" name="course" value="2" id="isCourse" />2
+                <input type="radio" name="course" value="3" id="isCourse" />3
+                <input type="radio" name="course" value="4" id="isCourse" />4
+            </div>
+            <div>
+                Предметы:<br />
+                <input type="checkbox" id="isLesson" value="ОИТ" />ОИТ
+                <input type="checkbox" id="isLesson" value="ОАП" />ОАП
+                <input type="checkbox" id="isLesson" value="История" />История
+                <input type="checkbox" id="isLesson" value="Физика" />Физика
+                <input type="checkbox" id="isLesson" value="Математика" />Математика
+            </div>
+            <div>
+                <input type="button" value="Ok" />
+                <input type="button" value="Cancel" />
+            </div>
+            <div>
+                <input type="button" value="Print" id="button" />
+            </div>
+        </fieldset>
+    </form>
+    <div class="out">
+        <h3 id="header-out"></h3>
+        <p id="info-out"></p>
+        <ul id="lessons-out" type="round"></ul>
+    </div>
+    <form class="form">
+        <fieldset>
+            <legend>Форма №2</legend>
+            Предметы:<br />
+            <select id="lessons">
+            </select>
+        </fieldset>
+    </form>
+    <script src="scripts/script.js" type="text/javascript"></script>
+</body>
+</html>
