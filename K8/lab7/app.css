@@ -322,3 +322,18 @@ span {
         color: rgba(0, 0, 0, 0);
     }
 }
+
+#navigator {
+    position: fixed;
+    right: 0px;
+    top: 200px;
+    writing-mode: vertical-lr;
+    border: 5px groove red;
+    z-index: 0;
+    background-color: yellow;
+}
+
+    #navigator .lab8Task1-1:link {
+        color: red;
+        text-decoration: none;
+    }
