@@ -19,6 +19,49 @@
     padding: 10px;
 }
 
+.lab8Task3Container {
+    display: none;
+}
+
+.lab8Task3Menu:hover ~ .lab8Task3Container {
+    display: inline-block;
+}
+
+.lab8Task3Container:hover {
+    display: inline-block;
+}
+
 .lab8Task4Menu {
     position: fixed;
+    top: 0px;
+    left: 500px;
+    border-right: 1px solid black;
+    z-index: 1;
 }
+
+    .lab8Task4Menu .lab8Task4Href {
+        display: table-cell;
+        border-left: 1px solid black;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        padding-right: 100px;
+        padding-left: 30px;
+        height: 30px;
+        vertical-align: middle;
+    }
+
+        .lab8Task4Menu .lab8Task4Href:hover {
+            background: url("../images/facultet0.png") 0px 0px no-repeat;
+        }
+
+        .lab8Task4Menu .lab8Task4Href:nth-of-type(2) {
+            background-position: 0px -30px;
+        }
+
+        .lab8Task4Menu .lab8Task4Href:nth-of-type(3) {
+            background-position: 0px -60px;
+        }
+
+        .lab8Task4Menu .lab8Task4Href:nth-of-type(4) {
+            background-position: 0px -90px;
+        }
