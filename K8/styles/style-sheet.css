@@ -1,2 +1,24 @@
-﻿body {
+﻿.lab8Task3Menu {
+    background-color: yellow;
+    border: 1px solid black;
+    color: blue;
+    display: inline-block;
+    padding: 10px 200px 10px 10px;
+}
+
+.lab8Task3Container {
+    background-color: coral;
+    display: inline-block;
+    border-bottom: 3px dashed black;
+}
+
+.lab8Task3Href {
+    border-top: 3px dashed black;
+    border-left: 3px dashed black;
+    border-right: 3px dashed black;
+    padding: 10px;
+}
+
+.lab8Task4Menu {
+    position: fixed;
 }

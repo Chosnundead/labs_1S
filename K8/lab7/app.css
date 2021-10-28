@@ -329,7 +329,7 @@ span {
     top: 200px;
     writing-mode: vertical-lr;
     border: 5px groove red;
-    z-index: 0;
+    z-index: 1;
     background-color: yellow;
 }
 
@@ -337,3 +337,28 @@ span {
         color: red;
         text-decoration: none;
     }
+
+.lab8Task2 {
+    position: fixed;
+    background-color: yellow;
+    top: 0;
+    z-index: 1;
+    left: 500px;
+    border-radius: 0px 0px 25px 25px;
+}
+
+    .lab8Task2 a {
+        border: 1px solid black;
+        margin: 0px;
+        padding: 10px;
+        display: table-cell;
+        color: green;
+    }
+
+        .lab8Task2 a:nth-of-type(1) {
+            border-radius: 0px 0px 0px 25px;
+        }
+
+        .lab8Task2 a:nth-of-type(5) {
+            border-radius: 0px 0px 25px 0px;
+        }

@@ -69,6 +69,7 @@
     <TypeScriptSourceRoot />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="images\facultet0.png" />
     <Content Include="lab7\app.css" />
     <Content Include="lab7\app.js" />
     <Content Include="lab7\img\img0.png" />
