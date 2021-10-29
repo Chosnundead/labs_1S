@@ -1,4 +1,4 @@
-﻿//#include "MyForm.h" // Для виндовс форм)
+﻿//#include "MyForm.h" // Для виндовс форм
 //#include <Windows.h>
 //using namespace Project2; // Название проекта
 //int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
