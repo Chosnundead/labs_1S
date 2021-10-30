@@ -72,6 +72,12 @@
     <Content Include="lab7\page0\page0.html" />
     <Content Include="lab7\page0\scripts\script.js" />
     <Content Include="lab7\page0\stylesheets\stylesheet.css" />
+    <Content Include="lab8\page0\images\img0.jpg" />
+    <Content Include="lab8\page0\images\img1.jpg" />
+    <Content Include="lab8\page0\page0.html" />
+    <Content Include="lab8\page0\scripts\jquery-3.6.0.min.js" />
+    <Content Include="lab8\page0\scripts\script.js" />
+    <Content Include="lab8\page0\stylesheets\stylesheet.css" />
     <Content Include="Little_boy.jpg" />
     <Content Include="package.json" />
     <Content Include="page0.html" />
