@@ -69,6 +69,7 @@
     <TypeScriptSourceRoot />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="jquery\jquery-3.6.0.min.js" />
     <Content Include="lab7\page0\page0.html" />
     <Content Include="lab7\page0\scripts\script.js" />
     <Content Include="lab7\page0\stylesheets\stylesheet.css" />
@@ -78,6 +79,19 @@
     <Content Include="lab8\page0\scripts\jquery-3.6.0.min.js" />
     <Content Include="lab8\page0\scripts\script.js" />
     <Content Include="lab8\page0\stylesheets\stylesheet.css" />
+    <Content Include="lab9-10\page0\images\img0.jpg" />
+    <Content Include="lab9-10\page0\page0.html" />
+    <Content Include="lab9-10\page0\scripts\jquery-3.6.0.min.js" />
+    <Content Include="lab9-10\page0\scripts\script.js" />
+    <Content Include="lab9-10\page0\stylesheets\stylesheet.css" />
+    <Content Include="lab9-10\page1\images\img0.jpg" />
+    <Content Include="lab9-10\page1\page1.html" />
+    <Content Include="lab9-10\page1\scripts\script.js" />
+    <Content Include="lab9-10\page1\stylesheets\stylesheet.css" />
+    <Content Include="lab9-10\page2\images\dot.png" />
+    <Content Include="lab9-10\page2\page2.html" />
+    <Content Include="lab9-10\page2\scripts\script.js" />
+    <Content Include="lab9-10\page2\stylesheets\stylesheet.css" />
     <Content Include="Little_boy.jpg" />
     <Content Include="package.json" />
     <Content Include="page0.html" />

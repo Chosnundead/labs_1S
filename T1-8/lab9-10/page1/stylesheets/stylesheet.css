@@ -1,0 +1,9 @@
+﻿.image {
+    position: absolute;
+    height: 140px;
+    width: 100px;
+}
+
+#image2 {
+    left: 500px;
+}
