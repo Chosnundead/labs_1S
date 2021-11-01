@@ -1,4 +1,6 @@
-﻿let isStart = false, tempOfX, tempOfY;
+﻿//Весь этот код можно заменить функцией dragable из jquery)
+
+let isStart = false, tempOfX, tempOfY;
 
 $("#block").on("mousedown", () => {
     $("#block").css("left", (+$("#block").css("left").replaceAll("px", "")));

@@ -7,10 +7,27 @@
 </head>
 <body>
     <div id="container" class="border"></div>
-    <input id="radioFunction" type="radio" name="function" value="(x * x)" checked />y = x^2
-    <input id="radioFunction" type="radio" name="function" value="(x * x * x)" />y = x^3
-    <input id="radioFunction" type="radio" name="function" value="(x * x)" />y = x^2
-    <input id="radioFunction" type="radio" name="function" value="(x * x)" />y = x^2
+    <div class="tab">
+        <select id="select">
+            <option value="images/dot.png">
+                Маленькая черная
+            </option>
+            <option value="images/dot_red.png">
+                Большая красная
+            </option>
+            <option value="images/dot_skull.png">
+                Черепа
+            </option>
+        </select>;
+        <input id="radioFunction" type="radio" name="function" value="(x * x)" checked />y = x^2
+        <input id="radioFunction" type="radio" name="function" value="(x * x * x)" />y = x^3
+        <input id="radioFunction" type="radio" name="function" value="(Math.sin(x))" />y = sin(x)
+        <input id="radioFunction" type="radio" name="function" value="(Math.cos(x))" />y = cos(x);
+        Расширение по Ox:<input type="number" id="sizeOfX" class="box" value="42" />;
+        Расширение по Oy:<input type="number" id="sizeOfY" class="box" value="20" />;
+        Шаг:<input type="number" id="stepIncreasing" class="box" value="0.05" />;
+        Размер Картинки:<input type="number" id="dotBoxSize" class="box" value="1" />;
+    </div>
     <!--<img class="image" src="images/dot.png" />-->
     <script src="../../jquery/jquery-3.6.0.min.js"></script>
     <script src="scripts/script.js"></script>

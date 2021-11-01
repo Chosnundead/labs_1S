@@ -89,6 +89,8 @@
     <Content Include="lab9-10\page1\scripts\script.js" />
     <Content Include="lab9-10\page1\stylesheets\stylesheet.css" />
     <Content Include="lab9-10\page2\images\dot.png" />
+    <Content Include="lab9-10\page2\images\dot_red.png" />
+    <Content Include="lab9-10\page2\images\dot_skull.png" />
     <Content Include="lab9-10\page2\page2.html" />
     <Content Include="lab9-10\page2\scripts\script.js" />
     <Content Include="lab9-10\page2\stylesheets\stylesheet.css" />
