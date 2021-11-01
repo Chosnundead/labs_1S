@@ -1,18 +1,26 @@
-﻿$("#container").on("mousedown", () => {
-    $("#container").on("selectstart", () => {
-        return false;
-    });
-    isBreak = false;
-    $("#block").css("left", event.clientX - 100);
-    $("#block").css("top", event.clientY - 100);
-    $("#container").on("mousemove", () => {
-        $("#container").on("mouseup", () => {
-            isBreak = true;
-        });
-        if (isBreak) {
-            $("#container").off("mousemove");
-        }
-        $("#block").css("left", event.clientX - 100);
-        $("#block").css("top", event.clientY - 100);
-    });
+﻿let isStart = false, tempOfX, tempOfY;
+
+$("#block").on("mousedown", () => {
+    $("#block").css("left", (+$("#block").css("left").replaceAll("px", "")));
+    $("#block").css("top", (+$("#block").css("top").replaceAll("px", "")));
+    tempOfX = event.clientX;
+    tempOfY = event.clientY;
+    isStart = true;
+});
+
+$("#container").on("mouseup", () => {
+    isStart = false;
+});
+
+$("#container").on("selectstart", () => {
+    return false;
+});
+
+$("#container").on("mousemove", () => {
+    if (isStart) {
+        $("#block").css("left", (event.clientX - (tempOfX - (+$("#block").css("left").replaceAll("px", "")))));
+        $("#block").css("top", (event.clientY - (tempOfY - (+$("#block").css("top").replaceAll("px", "")))));
+        tempOfX = event.clientX;
+        tempOfY = event.clientY;
+    }
 });
