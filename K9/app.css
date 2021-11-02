@@ -1,10 +1,12 @@
-﻿body {
-    font-family: 'Segoe UI', sans-serif;
+﻿@font-face {
+    font-family: 'diablo';
+    src: url('fonts/diablo.ttf');
 }
 
 * {
     margin: 0px;
     padding: 0px;
+    font-family: "diablo", sans-serif;
 }
 
 .grid0 {
@@ -15,6 +17,7 @@
     margin-left: 150px;
     margin-right: 150px;
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
     .grid0 > .box0 {
@@ -117,7 +120,7 @@
         justify-self: center;
         align-self: center;
         background-color: yellow;
-        font-size: 21px;
+        font-size: 19px;
         font-weight: bold;
         color: darkred;
     }
@@ -212,4 +215,44 @@
         background-image: url("images/img7.jfif");
         background-repeat: no-repeat;
         background-size: cover;
+    }
+
+.task4grid {
+    display: grid;
+    grid-template-areas: "nav head head head head head head"
+        "nav head head head head head head"
+        "nav cont cont cont cont aside aside"
+        "nav cont cont cont cont aside aside"
+        "nav cont cont cont cont aside aside"
+        "nav cont cont cont cont aside aside"
+        "foot foot foot foot foot foot foot";
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    margin: 50px;
+    grid-gap: 10px;
+}
+
+    .task4grid > .box0 {
+        grid-area: nav;
+    }
+
+    .task4grid > .box1 {
+        grid-area: head;
+    }
+
+    .task4grid > .box2 {
+        grid-area: cont;
+    }
+
+    .task4grid > .box3 {
+        grid-area: aside;
+    }
+
+    .task4grid > .box4 {
+        grid-area: foot;
+    }
+
+    .task4grid > .task4content {
+        background-color: rgb(114 251 119);
+        text-align: center;
     }
