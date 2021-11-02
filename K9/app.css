@@ -116,6 +116,9 @@
         width: fit-content;
         justify-self: center;
         align-self: center;
+        background-color: yellow;
+        font-size: 21px;
+        fo
     }
 
     .task2grid > .task2content {
