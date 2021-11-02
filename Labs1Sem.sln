@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K7", "K7\K7.csproj", "{BBFC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K8", "K8\K8.csproj", "{BD522B53-2025-4CA7-AEB5-C834EECBBE83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T1-8", "T1-8\T1-8.csproj", "{FB70003A-F472-4973-B67F-345B88A0F876}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T1-end", "T1-end\T1-end.csproj", "{FB70003A-F472-4973-B67F-345B88A0F876}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

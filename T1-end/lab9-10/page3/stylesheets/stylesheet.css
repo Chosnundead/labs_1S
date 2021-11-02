@@ -1,0 +1,68 @@
+﻿.menu-item {
+    border: 2px solid #66CDAA;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation-name: colorChange;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+    .menu-item:hover {
+        transform: scale(1.1);
+        z-index: 1;
+    }
+
+.submenu {
+    height: 40px;
+    width: 120px;
+    border: 5px solid darkred;
+    position: absolute;
+    cursor: pointer;
+}
+
+    .submenu:hover {
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+@keyframes colorChange {
+    0% {
+        color: red;
+    }
+
+    12.5% {
+        color: orange;
+    }
+
+    25% {
+        color: yellow;
+    }
+
+    37.5% {
+        color: lightgreen;
+    }
+
+    50% {
+        color: green;
+    }
+
+    62.5% {
+        color: lightblue;
+    }
+
+    75% {
+        color: blue;
+    }
+
+    87.5% {
+        color: purple;
+    }
+
+    100% {
+        color: darkred;
+    }
+}

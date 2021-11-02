@@ -94,6 +94,9 @@
     <Content Include="lab9-10\page2\page2.html" />
     <Content Include="lab9-10\page2\scripts\script.js" />
     <Content Include="lab9-10\page2\stylesheets\stylesheet.css" />
+    <Content Include="lab9-10\page3\page3.html" />
+    <Content Include="lab9-10\page3\scripts\script.js" />
+    <Content Include="lab9-10\page3\stylesheets\stylesheet.css" />
     <Content Include="Little_boy.jpg" />
     <Content Include="package.json" />
     <Content Include="page0.html" />
