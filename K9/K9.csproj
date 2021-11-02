@@ -69,6 +69,14 @@
     <TypeScriptSourceRoot />
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="images\img0.jfif" />
+    <Content Include="images\img1.jpg" />
+    <Content Include="images\img2.jfif" />
+    <Content Include="images\img3.jfif" />
+    <Content Include="images\img4.jpg" />
+    <Content Include="images\img5.jfif" />
+    <Content Include="images\img6.jfif" />
+    <Content Include="images\img7.jfif" />
     <Content Include="images\wagner.png" />
     <Content Include="package.json" />
     <Content Include="webpack.config.js" />

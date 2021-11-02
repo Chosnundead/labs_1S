@@ -118,7 +118,25 @@
         align-self: center;
         background-color: yellow;
         font-size: 21px;
-        fo
+        font-weight: bold;
+        color: darkred;
+    }
+
+        .task2grid > .box1 > nav > a {
+            text-decoration: none;
+            color: darkred;
+        }
+
+    .task2grid > .task2header {
+        color: darkred;
+        font-weight: 500;
+        background-color: rgb(147 137 137);
+    }
+
+    .task2grid > .task2footer {
+        background-color: rgb(214 119 119);
+        color: black;
+        font-weight: 300;
     }
 
     .task2grid > .task2content {
@@ -128,11 +146,70 @@
 
 .task3grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: minmax(100px, auto);
-    grid-gap: 1em;
+    grid-template-areas: "box0 box0 box1 box1 box2 box2 box3 box3"
+        "box4 box4 box5 box5 box6 box6 box7 box7";
+    grid-template-rows: repeat(2, 150px);
+    grid-template-columns: repeat(8, 150px);
+    grid-gap: 10px;
     margin-left: 150px;
     margin-right: 150px;
     margin-top: 50px;
     margin-bottom: 50px;
+    justify-content: center;
 }
+
+    .task3grid > .box0 {
+        grid-area: box0;
+        background-image: url("images/img0.jfif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .task3grid > .box1 {
+        grid-area: box1;
+        background-image: url("images/img1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .task3grid > .box2 {
+        grid-area: box2;
+        background-image: url("images/img2.jfif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .task3grid > .box3 {
+        grid-area: box3;
+        background-image: url("images/img3.jfif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .task3grid > .box4 {
+        grid-area: box4;
+        background-image: url("images/img4.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .task3grid > .box5 {
+        grid-area: box5;
+        background-image: url("images/img5.jfif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .task3grid > .box6 {
+        grid-area: box6;
+        background-image: url("images/img6.jfif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .task3grid > .box7 {
+        grid-area: box7;
+        background-image: url("images/img7.jfif");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
