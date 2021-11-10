@@ -79,6 +79,9 @@
     <Content Include="images\img7.jfif" />
     <Content Include="images\wagner.png" />
     <Content Include="package.json" />
+    <Content Include="page0\page0.html" />
+    <Content Include="page0\stylesheets\normalize.css" />
+    <Content Include="page0\stylesheets\skeleton.css" />
     <Content Include="webpack.config.js" />
     <Content Include="package-lock.json" />
     <Content Include="fonts\diablo.ttf" />
