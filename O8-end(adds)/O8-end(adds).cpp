@@ -14,6 +14,7 @@
 #include "lab10add3.h"
 #include "lab11add1.h"
 #include "lab11add2.h"
+#include "lab11add3.h"
 
 using namespace std;
 
@@ -103,7 +104,7 @@ void _lab11() {
 		lab11add2 start;
 	}
 	else if (lab11 == "add3") {
-		lab10add3 start;//доделать
+		lab11add3 start;//доделать
 	}
 	else {
 		cout << "Error!\n";

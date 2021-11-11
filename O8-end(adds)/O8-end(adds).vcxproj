@@ -144,6 +144,7 @@
     <ClCompile Include="lab10add3.cpp" />
     <ClCompile Include="lab11add1.cpp" />
     <ClCompile Include="lab11add2.cpp" />
+    <ClCompile Include="lab11add3.cpp" />
     <ClCompile Include="lab8add1.cpp" />
     <ClCompile Include="lab8add2.cpp" />
     <ClCompile Include="lab8add3.cpp" />
@@ -161,6 +162,7 @@
     <ClInclude Include="lab10add3.h" />
     <ClInclude Include="lab11add1.h" />
     <ClInclude Include="lab11add2.h" />
+    <ClInclude Include="lab11add3.h" />
     <ClInclude Include="lab8add1.h" />
     <ClInclude Include="lab8add2.h" />
     <ClInclude Include="lab8add3.h" />
