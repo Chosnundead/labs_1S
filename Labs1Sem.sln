@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K9", "K9\K9.csproj", "{A128
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "O8-end(adds)", "O8-end(adds)\O8-end(adds).vcxproj", "{EA845B3B-4F94-4516-ADE3-45C733CB0C70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K10", "K10\K10.csproj", "{8F52612B-4A1A-4888-873E-28D35F245A00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +191,18 @@ Global
 		{EA845B3B-4F94-4516-ADE3-45C733CB0C70}.Release|x64.Build.0 = Release|x64
 		{EA845B3B-4F94-4516-ADE3-45C733CB0C70}.Release|x86.ActiveCfg = Release|Win32
 		{EA845B3B-4F94-4516-ADE3-45C733CB0C70}.Release|x86.Build.0 = Release|Win32
+		{8F52612B-4A1A-4888-873E-28D35F245A00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F52612B-4A1A-4888-873E-28D35F245A00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F52612B-4A1A-4888-873E-28D35F245A00}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8F52612B-4A1A-4888-873E-28D35F245A00}.Debug|x64.Build.0 = Debug|Any CPU
+		{8F52612B-4A1A-4888-873E-28D35F245A00}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8F52612B-4A1A-4888-873E-28D35F245A00}.Debug|x86.Build.0 = Debug|Any CPU
+		{8F52612B-4A1A-4888-873E-28D35F245A00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F52612B-4A1A-4888-873E-28D35F245A00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F52612B-4A1A-4888-873E-28D35F245A00}.Release|x64.ActiveCfg = Release|Any CPU
+		{8F52612B-4A1A-4888-873E-28D35F245A00}.Release|x64.Build.0 = Release|Any CPU
+		{8F52612B-4A1A-4888-873E-28D35F245A00}.Release|x86.ActiveCfg = Release|Any CPU
+		{8F52612B-4A1A-4888-873E-28D35F245A00}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,36 @@
+﻿@font-face {
+    font-family: "diablo";
+    src: url("../../fonts/diablo.ttf");
+}
+
+* {
+    font-family: diablo;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu {
+    display: block;
+    width: 70%;
+    margin: 0 auto 10px auto;
+    background-color: rgb(66 58 58);
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.mouse {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.select {
+    border: 1px solid silver;
+    padding: 5px;
+    background-color: black;
+}
+
+    .select > a {
+        text-decoration: none;
+        color: darkred;
+    }
