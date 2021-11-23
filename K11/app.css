@@ -1,0 +1,90 @@
+﻿@font-face {
+    font-family: diablo;
+    src: url("fonts/diablo.ttf");
+}
+
+@keyframes text {
+    0% {
+        color: rgba(100, 10, 10, 0.7);
+    }
+
+    50% {
+        color: rgba(100, 10, 10, 1);
+    }
+
+    100% {
+        color: rgba(100, 10, 10, 0.7);
+    }
+}
+
+main {
+    margin: 0;
+    padding: 0;
+    font-family: diablo;
+    font-weight: 700;
+    animation-name: text;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    cursor: default;
+    background-color: black;
+    background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px), radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px), radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px), radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+    block[class=main-container] {
+    }
+
+    block[class=head] {
+        flex-direction: row;
+    }
+
+    block[class=body] {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    block[class=body-left] {
+        align-items: flex-start;
+    }
+
+    block[class=body-right] {
+        background-image: url("images/screenshot.png");
+        background-repeat: round;
+        height: 700px;
+        width: 600px;
+    }
+
+text {
+    display: block;
+}
+
+    text[class=t] {
+        margin-left: 21px;
+    }
+
+    text[class=tt] {
+        margin-left: 42px;
+    }
+
+    text[class=ttt] {
+        margin-left: 63px;
+    }
+
+    text[class=tttt] {
+        margin-left: 84px;
+    }
+
+    text[class=ttttt] {
+        margin-left: 105px;
+    }

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE main [
+	<!ELEMENT main ANY>
+	<!ELEMENT block (#PCDATA | block | text)*>
+	<!ATTLIST block class CDATA #IMPLIED>
+	<!ELEMENT text (#PCDATA)*>
+	<!ATTLIST text class CDATA #IMPLIED>
+	<!ELEMENT script (#PCDATA)*>
+	<!ATTLIST script type CDATA #IMPLIED
+					 src CDATA #IMPLIED
+					 xmlns CDATA #IMPLIED>
+]>
+<?xml-stylesheet href="app.css"?>
+
+<main>
+	<block class="main-container">
+		<block class="head">
+			Проверка валидности
+		</block>
+		<block class="body">
+			<block class="body-left">
+				<text>&lt;?xml version="1.0" encoding="utf-8"?&gt;													</text>
+				<text>&lt;xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;	</text>
+				<text class="t">&lt;xs:element name="main"&gt;														</text>
+				<text class="tt">&lt;xs:complexType mixed="true"&gt;												</text>
+				<text class="ttt">&lt;xs:sequence&gt;																</text>
+				<text class="tttt">&lt;xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" /&gt;			</text>
+				<text class="ttt">&lt;/xs:sequence&gt;																</text>
+				<text class="tt">&lt;/xs:complexType&gt;															</text>
+				<text class="t">&lt;/xs:element&gt;																	</text>
+				<text class="t">&lt;xs:element name="block"&gt;														</text>
+				<text class="tt">&lt;xs:complexType mixed="true"&gt;												</text>
+				<text class="ttt">&lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;								</text>
+				<text class="tttt">&lt;xs:element ref="block" /&gt;													</text>
+				<text class="tttt">&lt;xs:element ref="text" /&gt;													</text>
+				<text class="ttt">&lt;/xs:choice&gt;																</text>
+				<text class="ttt">&lt;xs:attribute name="class" type="xs:string" /&gt;								</text>
+				<text class="tt">&lt;/xs:complexType&gt;															</text>
+				<text class="t">&lt;/xs:element&gt;																	</text>
+				<text class="t">&lt;xs:element name="text"&gt;														</text>
+				<text class="tt">&lt;xs:complexType&gt;																</text>
+				<text class="ttt">&lt;xs:simpleContent&gt;															</text>
+				<text class="tttt">&lt;xs:extension base="xs:string"&gt;											</text>
+				<text class="ttttt">&lt;xs:attribute name="class" type="xs:string" /&gt;							</text>
+				<text class="tttt">&lt;/xs:extension&gt;															</text>
+				<text class="ttt">&lt;/xs:simpleContent&gt;															</text>
+				<text class="tt">&lt;/xs:complexType&gt;															</text>
+				<text class="t">&lt;/xs:element&gt;																	</text>
+				<text class="t">&lt;xs:element name="script"&gt;													</text>
+				<text class="tt">&lt;xs:complexType&gt;																</text>
+				<text class="ttt">&lt;xs:simpleContent&gt;															</text>
+				<text class="tttt">&lt;xs:extension base="xs:string"&gt;											</text>
+				<text class="ttttt">&lt;xs:attribute name="type" type="xs:string" /&gt;								</text>
+				<text class="ttttt">&lt;xs:attribute name="src" type="xs:string" /&gt;								</text>
+				<text class="tttt">&lt;/xs:extension&gt;															</text>
+				<text class="ttt">&lt;/xs:simpleContent&gt;															</text>
+				<text class="tt">&lt;/xs:complexType&gt;															</text>
+				<text class="t">&lt;/xs:element&gt;																	</text>
+				<text>&lt;/xs:schema&gt;																			</text>
+			</block>
+			<block class="body-right">
+			</block>
+		</block>
+	</block>
+	<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" src="app.js"></script>
+</main>
