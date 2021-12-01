@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE main [
+	<!ENTITY test "test">
 	<!ELEMENT main ANY>
 	<!ELEMENT block (#PCDATA | block | text)*>
 	<!ATTLIST block class CDATA #IMPLIED>

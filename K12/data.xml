@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE main [
+	<!ELEMENT main ANY>
+	<!ELEMENT student (#PCDATA | surname | java-script | physics | english)*>
+	<!ELEMENT surname (#PCDATA)*>
+	<!ELEMENT java-script (#PCDATA)*>
+	<!ELEMENT physics (#PCDATA)*>
+	<!ELEMENT english (#PCDATA)*>
+]>
+<?xml-stylesheet type="text/xsl" href="table.xsl"?>
+<main>
+	<student>
+		<surname>
+			Солодкий
+		</surname>
+		<java-script>
+			7
+		</java-script>
+		<physics>
+			5
+		</physics>
+		<english>
+			7
+		</english>
+	</student>
+	<student>
+		<surname>
+			Яцкевич
+		</surname>
+		<java-script>
+			4
+		</java-script>
+		<physics>
+			5
+		</physics>
+		<english>
+			7
+		</english>
+	</student>
+	<student>
+		<surname>
+			Подолянчик
+		</surname>
+		<java-script>
+			5
+		</java-script>
+		<physics>
+			7
+		</physics>
+		<english>
+			6
+		</english>
+	</student>
+	<student>
+		<surname>
+			Погудо
+		</surname>
+		<java-script>
+			4
+		</java-script>
+		<physics>
+			4
+		</physics>
+		<english>
+			4
+		</english>
+	</student>
+	<student>
+		<surname>
+			Мяделец
+		</surname>
+		<java-script>
+			10
+		</java-script>
+		<physics>
+			7
+		</physics>
+		<english>
+			8
+		</english>
+	</student>
+	<student>
+		<surname>
+			Маргун
+		</surname>
+		<java-script>
+			5
+		</java-script>
+		<physics>
+			2
+		</physics>
+		<english>
+			3
+		</english>
+	</student>
+</main>

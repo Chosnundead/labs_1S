@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE main [
+	<!ENTITY test "test">
+	<!ELEMENT main ANY>
+	<!ELEMENT block (#PCDATA | block | text)*>
+	<!ELEMENT text (#PCDATA)*>
+	<!ATTLIST text class CDATA #IMPLIED>
+]>
+<?xml-stylesheet type="text/xsl" href="task1.xsl"?>
+
+<main>
+	<block>
+		<text>&lt;?xml version="1.0" encoding="utf-8"?&gt;													</text>
+	</block>
+	<block>
+		<text>&lt;xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;	</text>
+	</block>
+	<block>
+		<text class="t">&lt;xs:element name="main"&gt;														</text>
+	</block>
+	<block>
+		<text class="tt">&lt;xs:complexType mixed="true"&gt;												</text>
+	</block>
+	<block>
+		<text class="ttt">&lt;xs:sequence&gt;																</text>
+	</block>
+	<block>
+		<text class="tttt">&lt;xs:any minOccurs="0" maxOccurs="unbounded" namespace="##any" /&gt;			</text>
+	</block>
+	<block>
+		<text class="ttt">&lt;/xs:sequence&gt;																</text>
+	</block>
+	<block>
+		<text class="tt">&lt;/xs:complexType&gt;															</text>
+	</block>
+	<block>
+		<text class="t">&lt;/xs:element&gt;																	</text>
+	</block>
+	<block>
+		<text class="t">&lt;xs:element name="block"&gt;														</text>
+	</block>
+	<block>
+		<text class="tt">&lt;xs:complexType mixed="true"&gt;												</text>
+	</block>
+	<block>
+		<text class="ttt">&lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;								</text>
+	</block>
+	<block>
+		<text class="tttt">&lt;xs:element ref="block" /&gt;													</text>
+	</block>
+	<block>
+		<text class="tttt">&lt;xs:element ref="text" /&gt;													</text>
+	</block>
+	<block>
+		<text class="ttt">&lt;/xs:choice&gt;																</text>
+	</block>
+	<block>
+		<text class="ttt">&lt;xs:attribute name="class" type="xs:string" /&gt;								</text>
+	</block>
+	<block>
+		<text class="tt">&lt;/xs:complexType&gt;															</text>
+	</block>
+	<block>
+		<text class="t">&lt;/xs:element&gt;																	</text>
+	</block>
+	<block>
+		<text class="t">&lt;xs:element name="text"&gt;														</text>
+	</block>
+	<block>
+		<text class="tt">&lt;xs:complexType&gt;																</text>
+	</block>
+	<block>
+		<text class="ttt">&lt;xs:simpleContent&gt;															</text>
+	</block>
+	<block>
+		<text class="tttt">&lt;xs:extension base="xs:string"&gt;											</text>
+	</block>
+	<block>
+		<text class="ttttt">&lt;xs:attribute name="class" type="xs:string" /&gt;							</text>
+	</block>
+	<block>
+		<text class="tttt">&lt;/xs:extension&gt;															</text>
+	</block>
+	<block>
+		<text class="ttt">&lt;/xs:simpleContent&gt;															</text>
+	</block>
+	<block>
+		<text class="tt">&lt;/xs:complexType&gt;															</text>
+	</block>
+	<block>
+		<text class="t">&lt;/xs:element&gt;																	</text>
+	</block>
+	<block>
+		<text class="t">&lt;xs:element name="script"&gt;													</text>
+	</block>
+	<block>
+		<text class="tt">&lt;xs:complexType&gt;																</text>
+	</block>
+	<block>
+		<text class="ttt">&lt;xs:simpleContent&gt;															</text>
+	</block>
+	<block>
+		<text class="tttt">&lt;xs:extension base="xs:string"&gt;											</text>
+	</block>
+	<block>
+		<text class="ttttt">&lt;xs:attribute name="type" type="xs:string" /&gt;								</text>
+	</block>
+	<block>
+		<text class="ttttt">&lt;xs:attribute name="src" type="xs:string" /&gt;								</text>
+	</block>
+	<block>
+		<text class="tttt">&lt;/xs:extension&gt;															</text>
+	</block>
+	<block>
+		<text class="ttt">&lt;/xs:simpleContent&gt;															</text>
+	</block>
+	<block>
+		<text class="tt">&lt;/xs:complexType&gt;															</text>
+	</block>
+	<block>
+		<text class="t">&lt;/xs:element&gt;																	</text>
+	</block>
+	<block>
+		<text>&lt;/xs:schema&gt;																			</text>
+	</block>
+</main>

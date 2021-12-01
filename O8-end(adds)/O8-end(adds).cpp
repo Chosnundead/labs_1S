@@ -111,6 +111,26 @@ void _lab11() {
 	}
 }
 
+void _lab12() {
+	string lab12;
+
+	cout << "lab12/";
+	cin >> lab12;
+
+	if (lab12 == "add1") {
+		lab11add1 start;
+	}
+	else if (lab12 == "add2") {
+		lab11add2 start;
+	}
+	else if (lab12 == "add3") {
+		lab11add3 start;
+	}
+	else {
+		cout << "Error!\n";
+	}
+}
+
 int main() {
 	string input;
 
@@ -137,6 +157,9 @@ int main() {
 		}
 		else if (input == "lab11") {
 			_lab11();
+		}
+		else if (input == "lab12") {
+			_lab12();
 		}
 		else {
 			cout << "Error!\n";
