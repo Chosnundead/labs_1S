@@ -17,6 +17,13 @@
 #include "lab11add3.h"
 #include "lab12add1.h"
 #include "lab12add2.h"
+#include "lab12add3.h"
+#include "lab13add1.h"
+#include "lab13add2.h"
+#include "lab13add3.h"
+#include "lab14add1.h"
+#include "lab14add2.h"
+#include "lab14add3.h"
 
 using namespace std;
 
@@ -126,7 +133,47 @@ void _lab12() {
 		lab12add2 start;
 	}
 	else if (lab12 == "add3") {
-		lab11add3 start;
+		lab12add3 start;
+	}
+	else {
+		cout << "Error!\n";
+	}
+}
+
+void _lab13() {
+	string lab13;
+
+	cout << "lab13/";
+	cin >> lab13;
+
+	if (lab13 == "add1") {
+		lab13add1 start;
+	}
+	else if (lab13 == "add2") {
+		lab13add2 start;
+	}
+	else if (lab13 == "add3") {
+		lab13add3 start;
+	}
+	else {
+		cout << "Error!\n";
+	}
+}
+
+void _lab14() {
+	string lab14;
+
+	cout << "lab14/";
+	cin >> lab14;
+
+	if (lab14 == "add1") {
+		lab14add1 start;
+	}
+	else if (lab14 == "add2") {
+		lab14add2 start;
+	}
+	else if (lab14 == "add3") {
+		lab14add3 start;
 	}
 	else {
 		cout << "Error!\n";
@@ -162,6 +209,12 @@ int main() {
 		}
 		else if (input == "lab12") {
 			_lab12();
+		}
+		else if (input == "lab13") {
+			_lab13();
+		}
+		else if (input == "lab14") {
+			_lab14();
 		}
 		else {
 			cout << "Error!\n";

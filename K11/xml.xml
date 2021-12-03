@@ -20,7 +20,6 @@
 		</block>
 		<block class="body">
 			<block class="body-left">
-				<text>&lt;?xml version="1.0" encoding="utf-8"?&gt;													</text>
 				<text>&lt;xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"&gt;	</text>
 				<text class="t">&lt;xs:element name="main"&gt;														</text>
 				<text class="tt">&lt;xs:complexType mixed="true"&gt;												</text>

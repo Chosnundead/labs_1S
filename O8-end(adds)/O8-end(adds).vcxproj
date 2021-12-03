@@ -147,6 +147,13 @@
     <ClCompile Include="lab11add3.cpp" />
     <ClCompile Include="lab12add1.cpp" />
     <ClCompile Include="lab12add2.cpp" />
+    <ClCompile Include="lab12add3.cpp" />
+    <ClCompile Include="lab13add1.cpp" />
+    <ClCompile Include="lab13add2.cpp" />
+    <ClCompile Include="lab13add3.cpp" />
+    <ClCompile Include="lab14add1.cpp" />
+    <ClCompile Include="lab14add2.cpp" />
+    <ClCompile Include="lab14add3.cpp" />
     <ClCompile Include="lab8add1.cpp" />
     <ClCompile Include="lab8add2.cpp" />
     <ClCompile Include="lab8add3.cpp" />
@@ -167,6 +174,13 @@
     <ClInclude Include="lab11add3.h" />
     <ClInclude Include="lab12add1.h" />
     <ClInclude Include="lab12add2.h" />
+    <ClInclude Include="lab12add3.h" />
+    <ClInclude Include="lab13add1.h" />
+    <ClInclude Include="lab13add2.h" />
+    <ClInclude Include="lab13add3.h" />
+    <ClInclude Include="lab14add1.h" />
+    <ClInclude Include="lab14add2.h" />
+    <ClInclude Include="lab14add3.h" />
     <ClInclude Include="lab8add1.h" />
     <ClInclude Include="lab8add2.h" />
     <ClInclude Include="lab8add3.h" />
