@@ -24,6 +24,12 @@
 #include "lab14add1.h"
 #include "lab14add2.h"
 #include "lab14add3.h"
+#include "lab16add1.h"
+#include "lab16add2.h"
+#include "lab16add3.h"
+#include "lab17add1.h"
+#include "lab17add2.h"
+#include "lab17add3.h"
 
 using namespace std;
 
@@ -180,6 +186,66 @@ void _lab14() {
 	}
 }
 
+void _lab16() {
+	string lab16;
+
+	cout << "lab16/";
+	cin >> lab16;
+
+	if (lab16 == "add1") {
+		lab16add1 start;
+	}
+	else if (lab16 == "add2") {
+		lab16add2 start;
+	}
+	else if (lab16 == "add3") {
+		lab16add3 start;
+	}
+	else {
+		cout << "Error!\n";
+	}
+}
+
+void _lab17() {
+	string lab17;
+
+	cout << "lab17/";
+	cin >> lab17;
+
+	if (lab17 == "add1") {
+		lab17add1 start;
+	}
+	else if (lab17 == "add2") {
+		lab17add2 start;
+	}
+	else if (lab17 == "add3") {
+		lab17add3 start;
+	}
+	else {
+		cout << "Error!\n";
+	}
+}
+
+void _lab18() {
+	string lab18;
+
+	cout << "lab18/";
+	cin >> lab18;
+
+	if (lab18 == "add1") {
+		lab17add1 start;
+	}
+	else if (lab18 == "add2") {
+		lab17add2 start;
+	}
+	else if (lab18 == "add3") {
+		lab17add3 start;
+	}
+	else {
+		cout << "Error!\n";
+	}
+}
+
 int main() {
 	string input;
 
@@ -215,6 +281,15 @@ int main() {
 		}
 		else if (input == "lab14") {
 			_lab14();
+		}
+		else if (input == "lab16") {
+			_lab16();
+		}
+		else if (input == "lab17") {
+			_lab17();
+		}
+		else if (input == "lab18") {
+			_lab18();
 		}
 		else {
 			cout << "Error!\n";

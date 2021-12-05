@@ -28,7 +28,7 @@ void _lab14add2task1() {
 	}
 	int sum = 0;
 	for (int step = minIndex; step < n; step++) {
-		sum += arr[step];
+		sum += abs(arr[step]);
 	}
 	cout << "Ответ: кол-во отрицательных равно " << counter << ", а сумма модулей равна " << sum << endl;
 }
