@@ -99,9 +99,57 @@
     <ClCompile Include="lab17add3.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="lab18add1.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="lab18add2.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="lab18add3.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="LabsMaster.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add1fileA.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add1fileB.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add1fileC.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add1fileD.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add2fileA.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add2fileB.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add2fileC.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add2fileF.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add2fileG.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add3fileA.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add3fileB.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add3fileF1.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="lab18add3fileF2.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>
@@ -185,6 +233,15 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="lab17add3.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="lab18add1.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="lab18add2.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="lab18add3.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

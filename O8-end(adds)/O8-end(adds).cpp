@@ -30,6 +30,9 @@
 #include "lab17add1.h"
 #include "lab17add2.h"
 #include "lab17add3.h"
+#include "lab18add1.h"
+#include "lab18add2.h"
+#include "lab18add3.h"
 
 using namespace std;
 
@@ -233,13 +236,13 @@ void _lab18() {
 	cin >> lab18;
 
 	if (lab18 == "add1") {
-		lab17add1 start;
+		lab18add1 start;
 	}
 	else if (lab18 == "add2") {
-		lab17add2 start;
+		lab18add2 start;
 	}
 	else if (lab18 == "add3") {
-		lab17add3 start;
+		lab18add3 start;
 	}
 	else {
 		cout << "Error!\n";
@@ -248,6 +251,7 @@ void _lab18() {
 
 int main() {
 	string input;
+	cout << "Input \"help\" for help menu." << endl;
 
 	while (true) {
 		cin >> input;

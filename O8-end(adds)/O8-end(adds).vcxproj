@@ -160,6 +160,9 @@
     <ClCompile Include="lab17add1.cpp" />
     <ClCompile Include="lab17add2.cpp" />
     <ClCompile Include="lab17add3.cpp" />
+    <ClCompile Include="lab18add1.cpp" />
+    <ClCompile Include="lab18add2.cpp" />
+    <ClCompile Include="lab18add3.cpp" />
     <ClCompile Include="lab8add1.cpp" />
     <ClCompile Include="lab8add2.cpp" />
     <ClCompile Include="lab8add3.cpp" />
@@ -169,6 +172,19 @@
     <ClCompile Include="O8-end(adds).cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="lab18add1fileA.txt" />
+    <Text Include="lab18add1fileB.txt" />
+    <Text Include="lab18add1fileC.txt" />
+    <Text Include="lab18add1fileD.txt" />
+    <Text Include="lab18add2fileA.txt" />
+    <Text Include="lab18add2fileB.txt" />
+    <Text Include="lab18add2fileC.txt" />
+    <Text Include="lab18add2fileF.txt" />
+    <Text Include="lab18add2fileG.txt" />
+    <Text Include="lab18add3fileA.txt" />
+    <Text Include="lab18add3fileB.txt" />
+    <Text Include="lab18add3fileF1.txt" />
+    <Text Include="lab18add3fileF2.txt" />
     <Text Include="LabsMaster.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +209,9 @@
     <ClInclude Include="lab17add1.h" />
     <ClInclude Include="lab17add2.h" />
     <ClInclude Include="lab17add3.h" />
+    <ClInclude Include="lab18add1.h" />
+    <ClInclude Include="lab18add2.h" />
+    <ClInclude Include="lab18add3.h" />
     <ClInclude Include="lab8add1.h" />
     <ClInclude Include="lab8add2.h" />
     <ClInclude Include="lab8add3.h" />

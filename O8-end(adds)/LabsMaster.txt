@@ -1,5 +1,44 @@
-lab8
-	add1
+help - help menu
+exit - close the programm
+clear - clear the screen
+======666======
+lab8//folder of lab
+	add1//number of add for this lab
 	add2
 	add3
 lab9
+	add1
+	add2
+	add3
+lab10
+	add1
+	add2
+	add3
+lab11
+	add1
+	add2
+	add3
+lab12
+	add1
+	add2
+	add3
+lab13
+	add1
+	add2
+	add3
+lab14
+	add1
+	add2
+	add3
+lab16
+	add1
+	add2
+	add3
+lab17
+	add1
+	add2
+	add3
+lab18
+	add1
+	add2
+	add3
