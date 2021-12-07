@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<main xmlns:xlink="http://www.w3.org/1999/xlink">
+	<img id="estoc">
+		<link xlink:type="simple" xlink:href="images/estoc.jpg" xlink:show="new">Estoc</link>
+	</img>
+	<img id="katana">
+		<link xlink:type="simple" xlink:href="images/katana.jpg" xlink:show="new">Katana</link>
+	</img>
+	<img id="lance">
+		<link xlink:type="simple" xlink:href="images/lance.jpg" xlink:show="new">Lance</link>
+	</img>
+	<img id="zweihander">
+		<link xlink:type="simple" xlink:href="images/zweihander.png" xlink:show="new">Zweihander</link>
+	</img>
+</main>
