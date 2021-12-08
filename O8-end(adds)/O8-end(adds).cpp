@@ -33,6 +33,7 @@
 #include "lab18add1.h"
 #include "lab18add2.h"
 #include "lab18add3.h"
+#include "myadd1.h"
 
 using namespace std;
 
@@ -249,6 +250,20 @@ void _lab18() {
 	}
 }
 
+void _my() {
+	string my;
+
+	cout << "my/";
+	cin >> my;
+
+	if (my == "add1") {
+		myadd1 start;
+	}
+	else {
+		cout << "Error!\n";
+	}
+}
+
 int main() {
 	string input;
 	cout << "Input \"help\" for help menu." << endl;
@@ -294,6 +309,9 @@ int main() {
 		}
 		else if (input == "lab18") {
 			_lab18();
+		}
+		else if (input == "my") {
+			_my();
 		}
 		else {
 			cout << "Error!\n";

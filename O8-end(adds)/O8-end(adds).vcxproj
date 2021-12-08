@@ -169,6 +169,7 @@
     <ClCompile Include="lab9add1.cpp" />
     <ClCompile Include="lab9add2.cpp" />
     <ClCompile Include="lab9add3.cpp" />
+    <ClCompile Include="myadd1.cpp" />
     <ClCompile Include="O8-end(adds).cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +219,11 @@
     <ClInclude Include="lab9add1.h" />
     <ClInclude Include="lab9add2.h" />
     <ClInclude Include="lab9add3.h" />
+    <ClInclude Include="myadd1.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="O8-end(adds).rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

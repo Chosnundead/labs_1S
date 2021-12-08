@@ -42,3 +42,5 @@ lab18
 	add1
 	add2
 	add3
+my
+	add1
