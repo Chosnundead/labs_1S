@@ -70,8 +70,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="package.json" />
+    <Content Include="page0.html" />
     <Content Include="webpack.config.js" />
     <Content Include="package-lock.json" />
+    <Content Include="example.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
