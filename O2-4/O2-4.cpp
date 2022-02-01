@@ -361,7 +361,8 @@ int main() {
 	do {
 		system("cls");
 
-		cout << "Выберите лабу(2, 3, 4): ";		cin >> NUMBER;
+		cout << "Выберите лабу(2, 3, 4): ";	
+		cin >> NUMBER;
 
 		if (NUMBER >= 2 && NUMBER <= 4) {
 			switch (NUMBER) {

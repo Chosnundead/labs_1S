@@ -287,7 +287,7 @@ void speedrun12() {
 		}
 		if (((sentence[i] <= -1 && sentence[i] >= -64) || (sentence[i] == -88) || (sentence[i] == -72)) && (!(count % 2))) {
 			while ((sentence[i] <= -1 && sentence[i] >= -64) || (sentence[i] == -88) || (sentence[i] == -72)) {
-				sentence[i] = NULL;
+				sentence[i] = 0;
 				i++;
 			}
 			count++;
@@ -303,13 +303,13 @@ void speedrun12() {
 
 	for (int i = 0; i < sentence.length(); i++) {
 		if ((sentence[i] == '\'') || (sentence[i] == '\"')) {
-			sentence[i] = NULL;
+			sentence[i] = 0;
 			i++;
 			while (!((sentence[i] == '\'') || (sentence[i] == '\"'))) {
-				sentence[i] = NULL;
+				sentence[i] = 0;
 				i++;
 			}
-			sentence[i] = NULL;
+			sentence[i] = 0;
 			i++;
 		}
 	}
@@ -1067,7 +1067,7 @@ void equipment() {
 	tmp[0] = n;
 	tmp[1] = 0;
 	for (int i = 0; i < 2000; i++) {
-		s[i] = NULL;
+		s[i] = 0;
 	}
 
 	while (tmp[0] > 0) {
@@ -1530,13 +1530,13 @@ void calculator() {
 
 	strcpy_s(textToChar, text.c_str());//Безопасная копия строки text с переводом в char элемента и копия его значения в соответсвующий элемент массива textToChar
 	for (int i = 0; i < 100; i++)
-		if ((textToChar[i] == 'ю') || (textToChar[i] == ' '))
-			textToChar[i] = NULL;
+		if (textToChar[i] == ' ')
+			textToChar[i] = 0;
 
 	for (int i = 0; i < 100; i++) {
 		if (textToChar[i] == '+' || textToChar[i] == '-' || textToChar[i] == '*' || textToChar[i] == '/' || textToChar[i] == '%') {
 			for (int j = i; j >= 0; j--) {
-				if (textToChar[j] != NULL) {
+				if (textToChar[j] != 0) {
 					switch (textToChar[j]) {
 					case '0':
 						number[0] = number[0] + 0 * pow(10, temp[0]);
@@ -1585,7 +1585,7 @@ void calculator() {
 			}
 
 			for (int k = 99; k != i; k--) {
-				if (textToChar[k] != NULL) {
+				if (textToChar[k] != 0) {
 					switch (textToChar[k]) {
 					case '0':
 						number[1] = number[1] + 0 * pow(10, temp[1]);
